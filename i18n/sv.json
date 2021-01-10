@@ -53,11 +53,11 @@
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support_version",
-    "translation": "Den här versionen av webbläsaren stöds inte längre av Mattermost"
+    "translation": "Den här versionen av webbläsaren stöds inte längre av Prossell"
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support",
-    "translation": "Den här webbläsaren stöds inte längre av Mattermost"
+    "translation": "Den här webbläsaren stöds inte längre av Prossell"
   },
   {
     "id": "web.error.unsupported_browser.min_os_version.windows",
@@ -101,7 +101,7 @@
   },
   {
     "id": "web.error.unsupported_browser.download_app_or_upgrade_browser",
-    "translation": "Ladda ner Mattermostappen eller använd en supporterad webbläsare för en bättre användarupplevelse."
+    "translation": "Ladda ner Prossellappen eller använd en supporterad webbläsare för en bättre användarupplevelse."
   },
   {
     "id": "web.error.unsupported_browser.download",
@@ -297,7 +297,7 @@
   },
   {
     "id": "oauth.gitlab.tos.error",
-    "translation": "GitLab's användningsvillkor har uppdaterats. Logga in på gitlab.com för att acceptera dem och logga sedan in i Mattermost igen."
+    "translation": "GitLab's användningsvillkor har uppdaterats. Logga in på gitlab.com för att acceptera dem och logga sedan in i Prossell igen."
   },
   {
     "id": "model.group_syncable.syncable_id.app_error",
@@ -1109,7 +1109,7 @@
   },
   {
     "id": "mattermost.bulletin.subject",
-    "translation": "Mattermost Tavlan för säkerheten"
+    "translation": "Prossell Tavlan för säkerheten"
   },
   {
     "id": "manaultesting.test_autolink.unable.app_error",
@@ -2477,11 +2477,11 @@
   },
   {
     "id": "app.system.warn_metric.bot_displayname",
-    "translation": "Mattermost Advisor"
+    "translation": "Prossell Advisor"
   },
   {
     "id": "app.system.warn_metric.bot_description",
-    "translation": "[Läs mer om Mattermost Advisor](https://about.mattermost.com/default-channel-handle-documentation)"
+    "translation": "[Läs mer om Prossell Advisor](https://about.mattermost.com/default-channel-handle-documentation)"
   },
   {
     "id": "app.system.save.app_error",
@@ -3037,7 +3037,7 @@
   },
   {
     "id": "ent.migration.migratetosaml.username_already_used_by_other_user",
-    "translation": "Användarnamnet används redan av en annan Mattermost-användare."
+    "translation": "Användarnamnet används redan av en annan Prossell-användare."
   },
   {
     "id": "ent.migration.migratetosaml.user_not_found_in_users_mapping_file",
@@ -3165,7 +3165,7 @@
   },
   {
     "id": "ent.ldap.syncronize.search_failure.app_error",
-    "translation": "Kunde inte söka på användare i AD/LDAP. Testa om Mattermost-servern kan ansluta till din AD/LDAP-server och försök igen."
+    "translation": "Kunde inte söka på användare i AD/LDAP. Testa om Prossell-servern kan ansluta till din AD/LDAP-server och försök igen."
   },
   {
     "id": "ent.ldap.syncronize.populate_syncables",
@@ -3205,7 +3205,7 @@
   },
   {
     "id": "ent.ldap.do_login.user_filtered.app_error",
-    "translation": "Ditt AD/LDAP-konto har inte behörighet för att använda denna Mattermost-server. Be din systemadministratör att kolla användarfiltret för AD/LDAP."
+    "translation": "Ditt AD/LDAP-konto har inte behörighet för att använda denna Prossell-server. Be din systemadministratör att kolla användarfiltret för AD/LDAP."
   },
   {
     "id": "ent.ldap.do_login.unable_to_connect.app_error",
@@ -5201,7 +5201,7 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.title",
-    "translation": "Din faktura för Mattermost Cloud förfaller"
+    "translation": "Din faktura för Prossell Cloud förfaller"
   },
   {
     "id": "api.templates.payment_failed_no_card.subject",
@@ -5213,7 +5213,7 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.info1",
-    "translation": "Mattermost Cloud-fakturan för den senaste perioden har skapats. Men, vi saknar dina kort-uppgifter för betalning."
+    "translation": "Prossell Cloud-fakturan för den senaste perioden har skapats. Men, vi saknar dina kort-uppgifter för betalning."
   },
   {
     "id": "api.templates.payment_failed_no_card.button",
@@ -5225,11 +5225,11 @@
   },
   {
     "id": "api.templates.payment_failed.subject",
-    "translation": "Åtgärd krävs: Betalning för Mattermost Cloud misslyckades"
+    "translation": "Åtgärd krävs: Betalning för Prossell Cloud misslyckades"
   },
   {
     "id": "api.templates.payment_failed.info3",
-    "translation": "För att säkerställa en fortsatt prenumeration på Mattermost Cloud bör du kontakta din kortutgivare för att åtgärda problemet, alternativt uppdatera dina betaluppgifter. När betalinformationen är uppdaterad kommer Mattermost försöka reglera eventuellt utestående saldo."
+    "translation": "För att säkerställa en fortsatt prenumeration på Prossell Cloud bör du kontakta din kortutgivare för att åtgärda problemet, alternativt uppdatera dina betaluppgifter. När betalinformationen är uppdaterad kommer Prossell försöka reglera eventuellt utestående saldo."
   },
   {
     "id": "api.templates.payment_failed.info2",
@@ -5237,7 +5237,7 @@
   },
   {
     "id": "api.templates.payment_failed.info1",
-    "translation": "Den senaste betalningen med betalkort {{.CardBrand}} ****{{.LastFour}} som angetts för Mattermost Cloud workspace gick inte igenom."
+    "translation": "Den senaste betalningen med betalkort {{.CardBrand}} ****{{.LastFour}} som angetts för Prossell Cloud workspace gick inte igenom."
   },
   {
     "id": "api.templates.password_change_subject",
@@ -5257,11 +5257,11 @@
   },
   {
     "id": "api.templates.over_limit_suspended_title",
-    "translation": "Mattermost Cloud-arbetsyta har stängts av"
+    "translation": "Prossell Cloud-arbetsyta har stängts av"
   },
   {
     "id": "api.templates.over_limit_suspended_subject",
-    "translation": "Din Mattermost Cloud-prenumeration har stängts av"
+    "translation": "Din Prossell Cloud-prenumeration har stängts av"
   },
   {
     "id": "api.templates.over_limit_suspended_info2",
@@ -5269,7 +5269,7 @@
   },
   {
     "id": "api.templates.over_limit_suspended_info1",
-    "translation": "Din Mattermost-arbetsyta har stängts av. Allt innehåll och data kommer raderas inom 1-3 månader."
+    "translation": "Din Prossell-arbetsyta har stängts av. Allt innehåll och data kommer raderas inom 1-3 månader."
   },
   {
     "id": "api.templates.over_limit_suspended_contact_support",
@@ -5277,7 +5277,7 @@
   },
   {
     "id": "api.templates.over_limit_subject",
-    "translation": "Över användargränsen i Mattermost Cloud Workspace"
+    "translation": "Över användargränsen i Prossell Cloud Workspace"
   },
   {
     "id": "api.templates.over_limit_info2",
@@ -5285,7 +5285,7 @@
   },
   {
     "id": "api.templates.over_limit_info1",
-    "translation": "Det ser ut som om du har fler än 10 användare i din miljö och det är över gränsen för den kostnadsfria versionen av Mattermost Cloud Professional. För att undvika avbrott i din Mattermostmiljö bör du uppgradera."
+    "translation": "Det ser ut som om du har fler än 10 användare i din miljö och det är över gränsen för den kostnadsfria versionen av Prossell Cloud Professional. För att undvika avbrott i din Prossellmiljö bör du uppgradera."
   },
   {
     "id": "api.templates.over_limit_fix_now",
@@ -5293,11 +5293,11 @@
   },
   {
     "id": "api.templates.over_limit_90_days_title",
-    "translation": "Din arbetsyta i Mattermost Cloud är schemalagd att avslutas under morgondagen"
+    "translation": "Din arbetsyta i Prossell Cloud är schemalagd att avslutas under morgondagen"
   },
   {
     "id": "api.templates.over_limit_90_days_subject",
-    "translation": "Din Mattermost Cloud-prenumeration kommer snart att avslutas"
+    "translation": "Din Prossell Cloud-prenumeration kommer snart att avslutas"
   },
   {
     "id": "api.templates.over_limit_90_days_info4",
@@ -5313,7 +5313,7 @@
   },
   {
     "id": "api.templates.over_limit_90_days_info1",
-    "translation": "Detta är en sista påminnelsen om att vi inte mottagit din betalning för din Mattermost-prenumeration som varit försenad sedan {{.OverLimitDate}}. Imorgon kommer vi stänga din tjänst."
+    "translation": "Detta är en sista påminnelsen om att vi inte mottagit din betalning för din Prossell-prenumeration som varit försenad sedan {{.OverLimitDate}}. Imorgon kommer vi stänga din tjänst."
   },
   {
     "id": "api.templates.over_limit_7_days_title",
@@ -5321,19 +5321,19 @@
   },
   {
     "id": "api.templates.over_limit_7_days_subject",
-    "translation": "Din betalning av Mattermost Cloud prenumerationen är försenad"
+    "translation": "Din betalning av Prossell Cloud prenumerationen är försenad"
   },
   {
     "id": "api.templates.over_limit_7_days_info1",
-    "translation": "Mattermost kunde inte behandla din senaste automatiska betalning. För att hålla din tjänst aktiv, vänligen lägg till betalningsuppgifter så snart som möjligt eller så kan din tjänst stängas av."
+    "translation": "Prossell kunde inte behandla din senaste automatiska betalning. För att hålla din tjänst aktiv, vänligen lägg till betalningsuppgifter så snart som möjligt eller så kan din tjänst stängas av."
   },
   {
     "id": "api.templates.over_limit_30_days_title",
-    "translation": "Skjut upp Mattermost Cloud Workspace"
+    "translation": "Skjut upp Prossell Cloud Workspace"
   },
   {
     "id": "api.templates.over_limit_30_days_subject",
-    "translation": " Agera för att behålla prenumerationen på din Mattermost Cloud"
+    "translation": " Agera för att behålla prenumerationen på din Prossell Cloud"
   },
   {
     "id": "api.templates.over_limit_30_days_info2_item3",
@@ -5353,7 +5353,7 @@
   },
   {
     "id": "api.templates.over_limit_30_days_info1",
-    "translation": "Det finns fortfarande tid att behålla din Mattermost Cloud workspace aktiv genom att lösa problemen med din betalning. För att undvika avbrott bör du uppdatera din betalningsmetod."
+    "translation": "Det finns fortfarande tid att behålla din Prossell Cloud workspace aktiv genom att lösa problemen med din betalning. För att undvika avbrott bör du uppdatera din betalningsmetod."
   },
   {
     "id": "api.templates.over_limit_14_days_title",
@@ -5361,11 +5361,11 @@
   },
   {
     "id": "api.templates.over_limit_14_days_subject",
-    "translation": "Din faktura för Mattermost Cloud prenumeration har förfallit"
+    "translation": "Din faktura för Prossell Cloud prenumeration har förfallit"
   },
   {
     "id": "api.templates.over_limit_14_days_info1",
-    "translation": "En liten påminnelse om att vi inte mottagit din betalning för din Mattermost-prenumeration med sista betaldag {{.OverLimitDate}}. Vi kommer snart påbörja processen att stänga dina tjänster om vi inte mottar betalning."
+    "translation": "En liten påminnelse om att vi inte mottagit din betalning för din Prossell-prenumeration med sista betaldag {{.OverLimitDate}}. Vi kommer snart påbörja processen att stänga dina tjänster om vi inte mottar betalning."
   },
   {
     "id": "api.templates.mfa_deactivated_body.title",
@@ -5409,7 +5409,7 @@
   },
   {
     "id": "api.templates.invite_body.extra_info",
-    "translation": "Med Mattermost kan du dela meddelanden och filer från din dator eller mobil med fulla sök- och arkiveringsmöjligheter. Efter att du gått med i [[{{.TeamDisplayName}}]] kan du logga in och använda funktionerna när som helst via webb-adressen:"
+    "translation": "Med Prossell kan du dela meddelanden och filer från din dator eller mobil med fulla sök- och arkiveringsmöjligheter. Efter att du gått med i [[{{.TeamDisplayName}}]] kan du logga in och använda funktionerna när som helst via webb-adressen:"
   },
   {
     "id": "api.templates.invite_body.button",
@@ -5489,7 +5489,7 @@
   },
   {
     "id": "api.templates.copyright",
-    "translation": "© 2020 Mattermost, Inc. 855 El Camino Real, 13A-168, Palo Alto, CA, 94301"
+    "translation": "© 2020 Prossell, Inc."
   },
   {
     "id": "api.templates.at_limit_title",
@@ -5497,7 +5497,7 @@
   },
   {
     "id": "api.templates.at_limit_subject",
-    "translation": "Du har nått gränsen för antal användare i Mattermost Cloud"
+    "translation": "Du har nått gränsen för antal användare i Prossell Cloud"
   },
   {
     "id": "api.templates.at_limit_info2",
@@ -5505,7 +5505,7 @@
   },
   {
     "id": "api.templates.at_limit_info1",
-    "translation": "Det ser ut som om du nu har 10 användare eller fler — Vad kul! Om du vill bjuda in fler teammedlemmar bör du nu uppgradera till Mattermost Cloud Professional."
+    "translation": "Det ser ut som om du nu har 10 användare eller fler — Vad kul! Om du vill bjuda in fler teammedlemmar bör du nu uppgradera till Prossell Cloud Professional."
   },
   {
     "id": "api.team.update_team_scheme.scheme_scope.error",
@@ -5877,7 +5877,7 @@
   },
   {
     "id": "api.slackimport.slack_import.log",
-    "translation": "Mattermost log för Slack-import\n"
+    "translation": "Prossell log för Slack-import\n"
   },
   {
     "id": "api.slackimport.slack_add_users.unable_import",
@@ -5889,11 +5889,11 @@
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing_failed",
-    "translation": "Slack-användare sammanslagen med en befintlig Mattermost-användare med {{.Email}} och användarid {{.Username}}, men kunde inte läggas till i gruppen.\n"
+    "translation": "Slack-användare sammanslagen med en befintlig Prossell-användare med {{.Email}} och användarid {{.Username}}, men kunde inte läggas till i gruppen.\n"
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing",
-    "translation": "Slack-användare sammanslagen med en befintlig Mattermost-användare med {{.Email}} och användarid {{.Username}}.\n"
+    "translation": "Slack-användare sammanslagen med en befintlig Prossell-användare med {{.Email}} och användarid {{.Username}}.\n"
   },
   {
     "id": "api.slackimport.slack_add_users.email_pwd",
@@ -5905,7 +5905,7 @@
   },
   {
     "id": "api.slackimport.slack_add_channels.merge",
-    "translation": "Slack-kanalen {{.DisplayName}} finns redan som en aktiv kanal i Mattermost. Kanalerna har slagits samman.\n"
+    "translation": "Slack-kanalen {{.DisplayName}} finns redan som en aktiv kanal i Prossell. Kanalerna har slagits samman.\n"
   },
   {
     "id": "api.slackimport.slack_add_channels.import_failed",
@@ -5941,7 +5941,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.start_trial.notification_body",
-    "translation": "Din Mattermostinstallation innehåller nu flera team. Olika Team kan ha olika sätt som samarbetet organiseras och koordineras, exempelvis hur kanaler skapas, vem som bjuda in nya teammedlemmar eller hur integrationer hanteras. Med Team Override Schemes har du möjligheten att skräddarsy användarbehörigheter inom specifika team så att deras behov kan mötas.\n\n[Läs mer om avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nGenom att klicka på Starta test godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Din Prossellinstallation innehåller nu flera team. Olika Team kan ha olika sätt som samarbetet organiseras och koordineras, exempelvis hur kanaler skapas, vem som bjuda in nya teammedlemmar eller hur integrationer hanteras. Med Team Override Schemes har du möjligheten att skräddarsy användarbehörigheter inom specifika team så att deras behov kan mötas.\n\n[Läs mer om avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nGenom att klicka på Starta test godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.notification_title",
@@ -5949,11 +5949,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.notification_body",
-    "translation": "Din Mattermostinstallation innehåller nu flera team. Olika Team kan ha olika sätt som samarbetet organiseras och koordineras, exempelvis hur kanaler skapas, vem som bjuda in nya teammedlemmar eller hur integrationer hanteras. Med Team Override Schemes har du möjligheten att skräddarsy användarbehörigheter inom specifika team så att deras behov kan mötas.\n\n[Läs mer om avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nGenom att klicka på Kontakta oss delar du information med Mattermost Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Din Prossellinstallation innehåller nu flera team. Olika Team kan ha olika sätt som samarbetet organiseras och koordineras, exempelvis hur kanaler skapas, vem som bjuda in nya teammedlemmar eller hur integrationer hanteras. Med Team Override Schemes har du möjligheten att skräddarsy användarbehörigheter inom specifika team så att deras behov kan mötas.\n\n[Läs mer om avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nGenom att klicka på Kontakta oss delar du information med Prossell Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about Advanced Permissions with Team Schemes.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about Advanced Permissions with Team Schemes.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_success.message",
@@ -5961,7 +5961,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_body",
-    "translation": "Din Mattermost-installation innehåller en stor mängd meddelanden. Sökfunktionen i Mattermost standarddatabas kommer tappa prestanda efter ca 2,5 miljoner meddelanden. Med över 5 miljoner meddelanden kan Elasticsearch förhindra påverkande prestandaproblem, som exempelvis timeout vid sökningar och @-omnämnanden. Kontakta oss för att veta mer och låt oss hjälpa dig.\n\n[Läs mer om prestandaförbättringar](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Din Prossell-installation innehåller en stor mängd meddelanden. Sökfunktionen i Prossell standarddatabas kommer tappa prestanda efter ca 2,5 miljoner meddelanden. Med över 5 miljoner meddelanden kan Elasticsearch förhindra påverkande prestandaproblem, som exempelvis timeout vid sökningar och @-omnämnanden. Kontakta oss för att veta mer och låt oss hjälpa dig.\n\n[Läs mer om prestandaförbättringar](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_title",
@@ -5969,11 +5969,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_body",
-    "translation": "Din Mattermost-installation innehåller en stor mängd meddelanden. Sökfunktionen i Mattermost standarddatabas kommer tappa prestanda efter ca 2,5 miljoner meddelanden. Med över 5 miljoner meddelanden kan Elasticsearch förhindra påverkande prestandaproblem, som exempelvis timeout vid sökningar och @-omnämnanden. Kontakta oss för att veta mer och låt oss hjälpa dig.\n\n[Läs mer om prestandaförbättringar](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nGenom att klicka på Kontakta oss delar du information med Mattermost Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Din Prossell-installation innehåller en stor mängd meddelanden. Sökfunktionen i Prossell standarddatabas kommer tappa prestanda efter ca 2,5 miljoner meddelanden. Med över 5 miljoner meddelanden kan Elasticsearch förhindra påverkande prestandaproblem, som exempelvis timeout vid sökningar och @-omnämnanden. Kontakta oss för att veta mer och låt oss hjälpa dig.\n\n[Läs mer om prestandaförbättringar](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nGenom att klicka på Kontakta oss delar du information med Prossell Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about improving performance with Elasticsearch.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about improving performance with Elasticsearch.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_success.message",
@@ -5981,7 +5981,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_body",
-    "translation": "Kanaler ger möjlighet att förbättra kommunikation men med alla användare i Mattermost som skapar och ansluter till kanaler ökar utmaningen att hålla ordning. Med avancerade behörigheter ges du möjligheten att styra vilka användare eller roller som kan göra vad, inklusive hantera kanalinställningar och medlemmar, använda @channel eller @here för att notifiera stora mängder användare eller vem som får skapa nya webhooks.\n\n[Läs mer om hur du använder avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Kanaler ger möjlighet att förbättra kommunikation men med alla användare i Prossell som skapar och ansluter till kanaler ökar utmaningen att hålla ordning. Med avancerade behörigheter ges du möjligheten att styra vilka användare eller roller som kan göra vad, inklusive hantera kanalinställningar och medlemmar, använda @channel eller @here för att notifiera stora mängder användare eller vem som får skapa nya webhooks.\n\n[Läs mer om hur du använder avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.notification_title",
@@ -5989,11 +5989,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.notification_body",
-    "translation": "Kanaler ger möjlighet att förbättra kommunikation men med alla användare i Mattermost som skapar och ansluter till kanaler ökar utmaningen att hålla ordning. Med avancerade behörigheter ges du möjligheten att styra vilka användare eller roller som kan göra vad, inklusive hantera kanalinställningar och medlemmar, använda @channel eller @here för att notifiera stora mängder användare eller vem som får skapa nya webhooks.\n\n[Läs mer om hur du använder avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nGenom att klicka på Kontakta oss delar du information med Mattermost Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Kanaler ger möjlighet att förbättra kommunikation men med alla användare i Prossell som skapar och ansluter till kanaler ökar utmaningen att hålla ordning. Med avancerade behörigheter ges du möjligheten att styra vilka användare eller roller som kan göra vad, inklusive hantera kanalinställningar och medlemmar, använda @channel eller @here för att notifiera stora mängder användare eller vem som får skapa nya webhooks.\n\n[Läs mer om hur du använder avancerade behörigheter](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nGenom att klicka på Kontakta oss delar du information med Prossell Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about using Advanced Permissions with System Schemes.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about using Advanced Permissions with System Schemes.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_success.message",
@@ -6001,19 +6001,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_body",
-    "translation": "Mattermost rekommenderar att installationer med fler än 500 användare nyttjar funktionerna för användarhantering, klusterteknik och prestandamätning. Kontakta oss för att veta mer och berätta på vilket sätt vi kan hjälpa till.\n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Prossell rekommenderar att installationer med fler än 500 användare nyttjar funktionerna för användarhantering, klusterteknik och prestandamätning. Kontakta oss för att veta mer och berätta på vilket sätt vi kan hjälpa till.\n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_title",
-    "translation": "Väx med Mattermost"
+    "translation": "Väx med Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_body",
-    "translation": "Mattermost rekommenderar att installationer med fler än 500 användare nyttjar funktionerna för användarhantering, klusterteknik och prestandamätning. Kontakta oss för att veta mer och berätta på vilket sätt vi kan hjälpa till.\n\nGenom att klicka på Kontakta oss delar du information med Mattermost Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Prossell rekommenderar att installationer med fler än 500 användare nyttjar funktionerna för användarhantering, klusterteknik och prestandamätning. Kontakta oss för att veta mer och berätta på vilket sätt vi kan hjälpa till.\n\nGenom att klicka på Kontakta oss delar du information med Prossell Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.contact_us.email_body",
-    "translation": "Mattermost contact us request. My team now has 500 users, and I'm considering Mattermost Enterprise Edition.\n"
+    "translation": "Prossell contact us request. My team now has 500 users, and I'm considering Prossell Enterprise Edition.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_title",
@@ -6025,15 +6025,15 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_body",
-    "translation": "Med all kommunikation som sker i Mattermost kan det vara utmanande att veta var man hittar viktig information. Om du vill komma ut med ditt budskap till en stor publik kan du skapa read-only Informationskanaler som vem som helst kan ansluta till men där endast administratören kan posta meddelanden.\n\n[Läs mer om att skapa Informationskanaler](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nGenom att klicka på Starta test godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Med all kommunikation som sker i Prossell kan det vara utmanande att veta var man hittar viktig information. Om du vill komma ut med ditt budskap till en stor publik kan du skapa read-only Informationskanaler som vem som helst kan ansluta till men där endast administratören kan posta meddelanden.\n\n[Läs mer om att skapa Informationskanaler](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nGenom att klicka på Starta test godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.notification_body",
-    "translation": "Med all kommunikation som sker i Mattermost kan det vara utmanande att veta var man hittar viktig information. Om du vill komma ut med ditt budskap till en stor publik kan du skapa read-only Informationskanaler som vem som helst kan ansluta till men där endast administratören kan posta meddelanden.\n\n[Läs mer om att skapa Informationskanaler](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n Genom att klicka på Kontakta oss delar du information med Mattermost Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Med all kommunikation som sker i Prossell kan det vara utmanande att veta var man hittar viktig information. Om du vill komma ut med ditt budskap till en stor publik kan du skapa read-only Informationskanaler som vem som helst kan ansluta till men där endast administratören kan posta meddelanden.\n\n[Läs mer om att skapa Informationskanaler](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n Genom att klicka på Kontakta oss delar du information med Prossell Inc. och lär dig mer om uppgradering. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about creating read-only Announcement Channels.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about creating read-only Announcement Channels.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_success.message",
@@ -6041,19 +6041,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_body",
-    "translation": "Din Mattermost-installation har nu 200 användare. När din ansluter Mattermost med din organisations single sign-on tjänst kommer dina användare kunna ansluta till Mattermost utan att ange inloggningsuppgifterna igen. Vi rekommenderar att du integrerar din SAML 2.0-tjänst med din Mattermost.server [Läs mer om integration med SAML 2.0] (https://docs.mattermost.com/deployment/sso-ldap.html?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml).\n\nGenom att klicka på Starta test godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Din Prossell-installation har nu 200 användare. När din ansluter Prossell med din organisations single sign-on tjänst kommer dina användare kunna ansluta till Prossell utan att ange inloggningsuppgifterna igen. Vi rekommenderar att du integrerar din SAML 2.0-tjänst med din Prossell.server [Läs mer om integration med SAML 2.0] (https://docs.mattermost.com/deployment/sso-ldap.html?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml).\n\nGenom att klicka på Starta test godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_title",
-    "translation": "Väx med Mattermost"
+    "translation": "Väx med Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_body",
-    "translation": "Din Mattermost-installation har nu 200 användare. När din ansluter Mattermost med din organisations single sign-on tjänst kommer dina användare kunna ansluta till Mattermost utan att ange inloggningsuppgifterna igen. Vi rekommenderar att du integrerar din SAML 2.0-tjänst med din Mattermost.server [Läs mer om integration med SAML 2.0] (https://docs.mattermost.com/deployment/sso-ldap.html?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml).\n\nGenom att klicka på Kontakta oss kommer du dela information med Mattermost Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Din Prossell-installation har nu 200 användare. När din ansluter Prossell med din organisations single sign-on tjänst kommer dina användare kunna ansluta till Prossell utan att ange inloggningsuppgifterna igen. Vi rekommenderar att du integrerar din SAML 2.0-tjänst med din Prossell.server [Läs mer om integration med SAML 2.0] (https://docs.mattermost.com/deployment/sso-ldap.html?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml).\n\nGenom att klicka på Kontakta oss kommer du dela information med Prossell Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.contact_us.email_body",
-    "translation": "Mattermost contact us request. My team now has 200 users, and I'm considering Mattermost Enterprise Edition.\n"
+    "translation": "Prossell contact us request. My team now has 200 users, and I'm considering Prossell Enterprise Edition.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_success.message",
@@ -6061,19 +6061,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_body",
-    "translation": "Din Mattermostinstallation har nu fler än 100 användare. När användarbasen växer kan kontoskapande vara tidskrävande. Vi rekommenderar att integrera din organisations Active Directory/LDAP med Mattermost så att alla med ett konto får tillgång till Mattermost.\n\n[Läs mer om integration med AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Din Prossellinstallation har nu fler än 100 användare. När användarbasen växer kan kontoskapande vara tidskrävande. Vi rekommenderar att integrera din organisations Active Directory/LDAP med Prossell så att alla med ett konto får tillgång till Prossell.\n\n[Läs mer om integration med AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_title",
-    "translation": "Väx med Mattermost"
+    "translation": "Väx med Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_body",
-    "translation": "Din Mattermostinstallation har nu fler än 100 användare. När användarbasen växer kan kontoskapande vara tidskrävande. Vi rekommenderar att integrera din organisations Active Directory/LDAP med Mattermost så att alla med ett konto får tillgång till Mattermost.\n\n[Läs mer om integration med AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nGenom att klicka på Kontakta oss kommer du dela information med Mattermost Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Din Prossellinstallation har nu fler än 100 användare. När användarbasen växer kan kontoskapande vara tidskrävande. Vi rekommenderar att integrera din organisations Active Directory/LDAP med Prossell så att alla med ett konto får tillgång till Prossell.\n\n[Läs mer om integration med AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nGenom att klicka på Kontakta oss kommer du dela information med Prossell Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.contact_us.email_body",
-    "translation": "Mattermost contact us request. My team now has 100 users, and I'm considering Mattermost Enterprise Edition.\n"
+    "translation": "Prossell contact us request. My team now has 100 users, and I'm considering Prossell Enterprise Edition.\n"
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial_notification_success.message",
@@ -6081,7 +6081,7 @@
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial.notification_body",
-    "translation": "Din Mattermostinstallation har flerfaktorsautentisering aktiverad som ger användaren möjlighet att säkra sitt konto med fler autentiseringslösningar utöver traditionellt lösenord. För att utöka säkerheten för hela installationen kan du kräva flerfaktorsiautentisering av alla anvädare.\n\n[Läs mer om flerfaktorsautentisering](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
+    "translation": "Din Prossellinstallation har flerfaktorsautentisering aktiverad som ger användaren möjlighet att säkra sitt konto med fler autentiseringslösningar utöver traditionellt lösenord. För att utöka säkerheten för hela installationen kan du kräva flerfaktorsiautentisering av alla anvädare.\n\n[Läs mer om flerfaktorsautentisering](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot mejl om produkten."
   },
   {
     "id": "api.server.warn_metric.mfa.notification_title",
@@ -6089,11 +6089,11 @@
   },
   {
     "id": "api.server.warn_metric.mfa.notification_body",
-    "translation": "Din Mattermostinstallation har flerfaktorsautentisering aktiverad som ger användaren möjlighet att säkra sitt konto med fler autentiseringslösningar utöver traditionellt lösenord. För att utöka säkerheten för hela installationen kan du kräva flerfaktorsiautentisering av alla anvädare.\n\n[Läs mer om flerfaktorsautentisering](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nGenom att klicka på Kontakta oss kommer du dela information med Mattermost Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Din Prossellinstallation har flerfaktorsautentisering aktiverad som ger användaren möjlighet att säkra sitt konto med fler autentiseringslösningar utöver traditionellt lösenord. För att utöka säkerheten för hela installationen kan du kräva flerfaktorsiautentisering av alla anvädare.\n\n[Läs mer om flerfaktorsautentisering](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nGenom att klicka på Kontakta oss kommer du dela information med Prossell Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.mfa.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about enforcing Multi-Factor Authentication.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about enforcing Multi-Factor Authentication.\n"
   },
   {
     "id": "api.server.warn_metric.email_us",
@@ -6105,7 +6105,7 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.start_trial.notification_body",
-    "translation": "I projekt involveras ofta personer både från din organisation och från andra. Med Gäst-konton kan externa parter bli en del av ditt Mattermost-system och du kan ange vem de kan jobba tillsammans med och vad de kan se.\n\n[Läs mer om att tillåta gäst-konton](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nGenom att klicka på Starta prova-på godkänner du [Mattermost Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot produktmejl."
+    "translation": "I projekt involveras ofta personer både från din organisation och från andra. Med Gäst-konton kan externa parter bli en del av ditt Prossell-system och du kan ange vem de kan jobba tillsammans med och vad de kan se.\n\n[Läs mer om att tillåta gäst-konton](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nGenom att klicka på Starta prova-på godkänner du [Prossell Software Evaluation Agreement](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/) och att ta emot produktmejl."
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_title",
@@ -6113,11 +6113,11 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_body",
-    "translation": "I projekt involveras ofta personer både från din organisation och från andra. Med Gäst-konton kan externa parter bli en del av ditt Mattermost-system och du kan ange vem de kan jobba tillsammans med och vad de kan se.\n\n[Läs mer om att tillåta gäst-konton](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nGenom att klicka på Kontakta oss kommer du dela med dig av din information med Mattermost Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "I projekt involveras ofta personer både från din organisation och från andra. Med Gäst-konton kan externa parter bli en del av ditt Prossell-system och du kan ange vem de kan jobba tillsammans med och vad de kan se.\n\n[Läs mer om att tillåta gäst-konton](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nGenom att klicka på Kontakta oss kommer du dela med dig av din information med Prossell Inc. [Läs mer](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.email_domain.contact_us.email_body",
-    "translation": "Mattermost contact us request. I'm interested in learning more about using Guest Accounts.\n"
+    "translation": "Prossell contact us request. I'm interested in learning more about using Guest Accounts.\n"
   },
   {
     "id": "api.server.warn_metric.contacting_us",
@@ -6317,7 +6317,7 @@
   },
   {
     "id": "api.license.request_trial_license.no-site-url.app_error",
-    "translation": "Kunde inte efterfråga en prova-på-licens. Konfigurera en sajt-URL under web-server-delen Mattermost System Console."
+    "translation": "Kunde inte efterfråga en prova-på-licens. Konfigurera en sajt-URL under web-server-delen Prossell System Console."
   },
   {
     "id": "api.license.request_trial_license.fail_get_user_count.app_error",
@@ -6333,7 +6333,7 @@
   },
   {
     "id": "api.license.request-trial.bad-request.terms-not-accepted",
-    "translation": "Du måste acceptera Mattermost Software Evaluation Agreement och Privacy Policy för att efterfråga en licens."
+    "translation": "Du måste acceptera Prossell Software Evaluation Agreement och Privacy Policy för att efterfråga en licens."
   },
   {
     "id": "api.license.request-trial.bad-request",
@@ -6537,43 +6537,43 @@
   },
   {
     "id": "api.upgrade_to_enterprise_status.signature.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition. Signaturen på den nedladdade filen kunde inte verifieras rätt."
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition. Signaturen på den nedladdade filen kunde inte verifieras rätt."
   },
   {
     "id": "api.upgrade_to_enterprise_status.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition."
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition."
   },
   {
     "id": "api.upgrade_to_enterprise.system_not_supported.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition. Denna funktion fungerar bara på Linux-system med x86-64-arkitektur."
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition. Denna funktion fungerar bara på Linux-system med x86-64-arkitektur."
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition. Mattermost system-användare {{.MattermostUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Mattermost är installerat:\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Mattermost igen. När Mattermost är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition. Prossell system-användare {{.ProssellUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Prossell är installerat:\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Prossell igen. När Prossell är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user-and-permission.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition. Mattermost system-användare {{.MattermostUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Mattermost är installerat:\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Mattermost igen. När Mattermost är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition. Prossell system-användare {{.ProssellUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Prossell är installerat:\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Prossell igen. När Prossell är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-permission.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Enterprise Edition. Mattermost system-användare {{.MattermostUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Mattermost är installerat:\n\n```\nchmod +w \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Mattermost igen. När Mattermost är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell kunde inte uppgradera till Enterprise Edition. Prossell system-användare {{.ProssellUsername}} har inte skrivrättigheter till nödvändiga programfiler. En systemadministratör kan uppdatera filrättigheterna genom att köra kommandot nedan på den server där Prossell är installerat:\n\n```\nchmod +w \"{{.Path}}\"\n```\n\nEfter att filrättigheterna är ändrade, försök uppgradera Prossell igen. När Prossell är uppgraderad och omstartad, kom ihåg att återställa filrättigheterna med:\n\n```\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.generic_error.app_error",
-    "translation": "Mattermost kunde inte uppgradera till Mattermost Enterprise Edition."
+    "translation": "Prossell kunde inte uppgradera till Prossell Enterprise Edition."
   },
   {
     "id": "api.upgrade_to_enterprise.app_error",
-    "translation": "En uppgradering till Mattermost Enterprise Edition är redan startad."
+    "translation": "En uppgradering till Prossell Enterprise Edition är redan startad."
   },
   {
     "id": "api.upgrade_to_enterprise.already-enterprise.app_error",
-    "translation": "Du kan inte uppgradera då du redan kör Mattermost Enterprise Edition."
+    "translation": "Du kan inte uppgradera då du redan kör Prossell Enterprise Edition."
   },
   {
     "id": "api.upgrade_to_enterprise.already-done.app_error",
-    "translation": "Du har redan uppgraderat till Mattermost Enterprise Edition. Starta om servern för att slutföra uppgraderingen."
+    "translation": "Du har redan uppgraderat till Prossell Enterprise Edition. Starta om servern för att slutföra uppgraderingen."
   },
   {
     "id": "api.templates.welcome_subject",
@@ -6585,7 +6585,7 @@
   },
   {
     "id": "api.templates.welcome_body.info3",
-    "translation": "Med Mattermost kan du dela meddelanden och filer från din dator eller mobil med fulla sök- och arkiveringsmöjligheter."
+    "translation": "Med Prossell kan du dela meddelanden och filer från din dator eller mobil med fulla sök- och arkiveringsmöjligheter."
   },
   {
     "id": "api.templates.welcome_body.info2",
@@ -6605,7 +6605,7 @@
   },
   {
     "id": "api.templates.warn_metric_ack.subject",
-    "translation": "Mattermost Contact Us request"
+    "translation": "Prossell Contact Us request"
   },
   {
     "id": "api.templates.warn_metric_ack.footer",
@@ -6713,7 +6713,7 @@
   },
   {
     "id": "api.templates.remove_expired_license.subject",
-    "translation": "Mattermost Enterprise-licensen har inaktiverats."
+    "translation": "Prossell Enterprise-licensen har inaktiverats."
   },
   {
     "id": "api.templates.remove_expired_license.body.title",
@@ -7207,7 +7207,7 @@
   },
   {
     "id": "api.command_logout.desc",
-    "translation": "Logga ut från Mattermost"
+    "translation": "Logga ut från Prossell"
   },
   {
     "id": "api.command_leave.name",
@@ -7319,7 +7319,7 @@
   },
   {
     "id": "api.command_help.desc",
-    "translation": "Öppna Mattermost hjälp sida"
+    "translation": "Öppna Prossell hjälp sida"
   },
   {
     "id": "api.command_groupmsg.permission.app_error",
@@ -7594,7 +7594,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_success.message",
-    "translation": "Tack för att du kontaktar Mattermost. Vi återkommer snart till dig."
+    "translation": "Tack för att du kontaktar Prossell. Vi återkommer snart till dig."
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_failure.message",
@@ -7606,7 +7606,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_subject",
-    "translation": "Mattermost Contact Us request"
+    "translation": "Prossell Contact Us request"
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_site_url_header",
@@ -7868,7 +7868,7 @@
   },
   {
     "id": "api.command.invite_people.desc",
-    "translation": "Skicka en e-postinbjudan till din Mattermost grupp"
+    "translation": "Skicka en e-postinbjudan till din Prossell grupp"
   },
   {
     "id": "api.command.execute_command.start.app_error",
@@ -8188,7 +8188,7 @@
   },
   {
     "id": "api.bot.teams_channels.add_message_mobile",
-    "translation": "Lägg till mig i grupper och kanaler som du vill att jag ska interagera i. För att göra detta, använd webbläsare eller Mattermost skrivbordsapp."
+    "translation": "Lägg till mig i grupper och kanaler som du vill att jag ska interagera i. För att göra detta, använd webbläsare eller Prossell skrivbordsapp."
   },
   {
     "id": "api.bot.set_bot_icon_image.too_large.app_error",
@@ -8252,7 +8252,7 @@
   },
   {
     "id": "api.admin.test_email.subject",
-    "translation": "Mattermost - Testar epostinställningar"
+    "translation": "Prossell - Testar epostinställningar"
   },
   {
     "id": "api.admin.test_email.reenter_password",
@@ -8264,7 +8264,7 @@
   },
   {
     "id": "api.admin.test_email.body",
-    "translation": "Det verkar som om Mattermost e-postinställningar är korrekta!"
+    "translation": "Det verkar som om Prossell e-postinställningar är korrekta!"
   },
   {
     "id": "api.admin.saml.set_certificate_from_metadata.missing_content_type.app_error",

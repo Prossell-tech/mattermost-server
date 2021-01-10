@@ -53,11 +53,11 @@
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support_version",
-    "translation": "Тази версия на вашия браузър вече не се поддържа от Mattermost"
+    "translation": "Тази версия на вашия браузър вече не се поддържа от Prossell"
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support",
-    "translation": "Този браузър вече не се поддържа от Mattermost"
+    "translation": "Този браузър вече не се поддържа от Prossell"
   },
   {
     "id": "web.error.unsupported_browser.min_os_version.windows",
@@ -101,7 +101,7 @@
   },
   {
     "id": "web.error.unsupported_browser.download_app_or_upgrade_browser",
-    "translation": "Изтеглете приложението Mattermost или използвайте поддържан браузър за по-добро изживяване."
+    "translation": "Изтеглете приложението Prossell или използвайте поддържан браузър за по-добро изживяване."
   },
   {
     "id": "web.error.unsupported_browser.download",
@@ -297,7 +297,7 @@
   },
   {
     "id": "oauth.gitlab.tos.error",
-    "translation": "Общите условия на GitLab са актуализирани. Моля, отидете на gitlab.com, за да ги приемете и след това опитайте да влезете в Mattermost отново."
+    "translation": "Общите условия на GitLab са актуализирани. Моля, отидете на gitlab.com, за да ги приемете и след това опитайте да влезете в Prossell отново."
   },
   {
     "id": "model.websocket_client.connect_fail.app_error",
@@ -1385,7 +1385,7 @@
   },
   {
     "id": "ent.migration.migratetosaml.username_already_used_by_other_user",
-    "translation": "Потребителско име вече се използва от друг потребител на Mattermost."
+    "translation": "Потребителско име вече се използва от друг потребител на Prossell."
   },
   {
     "id": "ent.migration.migratetosaml.user_not_found_in_users_mapping_file",
@@ -1881,7 +1881,7 @@
   },
   {
     "id": "ent.ldap.syncronize.search_failure.app_error",
-    "translation": "Неуспешно търсене на потребители в AD/LDAP. Проверете дали Mattermost сървъра може да се свърже с вашия AD/LDAP сървър и опитайте отново."
+    "translation": "Неуспешно търсене на потребители в AD/LDAP. Проверете дали Prossell сървъра може да се свърже с вашия AD/LDAP сървър и опитайте отново."
   },
   {
     "id": "ent.ldap.syncronize.populate_syncables",
@@ -1921,7 +1921,7 @@
   },
   {
     "id": "ent.ldap.do_login.user_filtered.app_error",
-    "translation": "Вашият AD/LDAP профил няма разрешение за използване на този Mattermost сървър. Моля, помолете вашия системен администратор да провери AD/LDAP потребителския филтър."
+    "translation": "Вашият AD/LDAP профил няма разрешение за използване на този Prossell сървър. Моля, помолете вашия системен администратор да провери AD/LDAP потребителския филтър."
   },
   {
     "id": "ent.ldap.do_login.unable_to_connect.app_error",
@@ -2589,11 +2589,11 @@
   },
   {
     "id": "app.system.warn_metric.bot_displayname",
-    "translation": "Mattermost съветник"
+    "translation": "Prossell съветник"
   },
   {
     "id": "app.system.warn_metric.bot_description",
-    "translation": "[Научете повече за Mattermost съветника](https://about.mattermost.com/default-channel-handle-documentation)"
+    "translation": "[Научете повече за Prossell съветника](https://about.mattermost.com/default-channel-handle-documentation)"
   },
   {
     "id": "app.system.save.app_error",
@@ -2693,7 +2693,7 @@
   },
   {
     "id": "mattermost.bulletin.subject",
-    "translation": "Mattermost бюлетин за сигурност"
+    "translation": "Prossell бюлетин за сигурност"
   },
   {
     "id": "manaultesting.test_autolink.unable.app_error",
@@ -3597,39 +3597,39 @@
   },
   {
     "id": "api.upgrade_to_enterprise_status.signature.app_error",
-    "translation": "Mattermost не можа да надстрои до корпоративна версия. Цифровия подпис на сваления двоичен файл не може да се провери."
+    "translation": "Prossell не можа да надстрои до корпоративна версия. Цифровия подпис на сваления двоичен файл не може да се провери."
   },
   {
     "id": "api.upgrade_to_enterprise_status.app_error",
-    "translation": "Mattermost не може да се надстрои до корпоративна версия."
+    "translation": "Prossell не може да се надстрои до корпоративна версия."
   },
   {
     "id": "api.upgrade_to_enterprise.system_not_supported.app_error",
-    "translation": "Mattermost не можа да надстрои до корпоративна версия. Тази функция ще работи само в Linux системи с x86-64 архитектура."
+    "translation": "Prossell не можа да надстрои до корпоративна версия. Тази функция ще работи само в Linux системи с x86-64 архитектура."
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user.app_error",
-    "translation": "Mattermost не можа да надстрои до корпоративна версия. Системния потребител Mattermost {{.MattermostUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира правата за файлове, като изпълни следната команда на сървъра, където е инсталиран Mattermost:\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Mattermost. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
+    "translation": "Prossell не можа да надстрои до корпоративна версия. Системния потребител Prossell {{.ProssellUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира правата за файлове, като изпълни следната команда на сървъра, където е инсталиран Prossell:\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Prossell. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user-and-permission.app_error",
-    "translation": "Mattermost не можа да надстрои до корпоративна версия. Системния потребител Mattermost {{.MattermostUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира правата за файлове, като изпълни следната команда на сървъра, където е инсталиран Mattermost:\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Mattermost. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell не можа да надстрои до корпоративна версия. Системния потребител Prossell {{.ProssellUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира правата за файлове, като изпълни следната команда на сървъра, където е инсталиран Prossell:\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Prossell. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-permission.app_error",
-    "translation": "Mattermost не можа да надстрои до корпоративна версия. Системния потребител Mattermost {{.MattermostUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира разрешенията за файлове, като изпълни следната команда на сървъра, където е инсталиран Mattermost:\n\n```\nchmod +w \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Mattermost. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell не можа да надстрои до корпоративна версия. Системния потребител Prossell {{.ProssellUsername}} няма права за запис до необходимия двоичен файл. Системният администратор може да актуализира разрешенията за файлове, като изпълни следната команда на сървъра, където е инсталиран Prossell:\n\n```\nchmod +w \"{{.Path}}\"\n```\n\nСлед като промените правата за файлове, опитайте да надстроите отново Prossell. След като надстроите и рестартирате, не забравяйте да възстановите оригиналните права на двоичния файл:\n\n```\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.generic_error.app_error",
-    "translation": "Mattermost не може да се надстрои до корпоративна версия."
+    "translation": "Prossell не може да се надстрои до корпоративна версия."
   },
   {
     "id": "api.upgrade_to_enterprise.app_error",
-    "translation": "Надстройката до Mattermost корпоративна версия е вече пусната."
+    "translation": "Надстройката до Prossell корпоративна версия е вече пусната."
   },
   {
     "id": "api.upgrade_to_enterprise.already-enterprise.app_error",
-    "translation": "Не можете да надстроите, защото вече използвате Mattermost корпоративна версия."
+    "translation": "Не можете да надстроите, защото вече използвате Prossell корпоративна версия."
   },
   {
     "id": "app.webhooks.get_outgoing.app_error",
@@ -4089,7 +4089,7 @@
   },
   {
     "id": "api.upgrade_to_enterprise.already-done.app_error",
-    "translation": "Вече надградихте до Mattermost корпоративна версия. Моля, рестартирайте сървъра, за да завършите надстройката."
+    "translation": "Вече надградихте до Prossell корпоративна версия. Моля, рестартирайте сървъра, за да завършите надстройката."
   },
   {
     "id": "api.templates.welcome_subject",
@@ -4101,7 +4101,7 @@
   },
   {
     "id": "api.templates.welcome_body.info3",
-    "translation": "Mattermost ви позволява да споделяте съобщения и файлове от вашия компютър или телефон, с незабавно търсене и архивиране."
+    "translation": "Prossell ви позволява да споделяте съобщения и файлове от вашия компютър или телефон, с незабавно търсене и архивиране."
   },
   {
     "id": "api.templates.welcome_body.info2",
@@ -4121,7 +4121,7 @@
   },
   {
     "id": "api.templates.warn_metric_ack.subject",
-    "translation": "Mattermost Свържете се с нас"
+    "translation": "Prossell Свържете се с нас"
   },
   {
     "id": "api.templates.warn_metric_ack.footer",
@@ -4229,7 +4229,7 @@
   },
   {
     "id": "api.templates.remove_expired_license.subject",
-    "translation": "Лицензът за Mattermost корпоративна е деактивиран."
+    "translation": "Лицензът за Prossell корпоративна е деактивиран."
   },
   {
     "id": "api.templates.remove_expired_license.body.title",
@@ -4245,11 +4245,11 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.title",
-    "translation": "Вашата Mattermost Cloud фактура е дължима"
+    "translation": "Вашата Prossell Cloud фактура е дължима"
   },
   {
     "id": "api.templates.payment_failed_no_card.subject",
-    "translation": "Плащането се дължи за вашия Mattermost Cloud абонамент"
+    "translation": "Плащането се дължи за вашия Prossell Cloud абонамент"
   },
   {
     "id": "api.templates.payment_failed_no_card.info3",
@@ -4257,7 +4257,7 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.info1",
-    "translation": "Вашата фактура за Mattermost Cloud за последния период на фактуриране е обработена. Ние обаче не разполагаме с вашите данни за плащане."
+    "translation": "Вашата фактура за Prossell Cloud за последния период на фактуриране е обработена. Ние обаче не разполагаме с вашите данни за плащане."
   },
   {
     "id": "api.templates.payment_failed_no_card.button",
@@ -4269,11 +4269,11 @@
   },
   {
     "id": "api.templates.payment_failed.subject",
-    "translation": "Изисква се действие: Неуспешно плащане за Mattermost Cloud"
+    "translation": "Изисква се действие: Неуспешно плащане за Prossell Cloud"
   },
   {
     "id": "api.templates.payment_failed.info3",
-    "translation": "За да осигурите непрекъснат абонамент за Mattermost Cloud, моля, свържете се с вашата финансова институция, за да отстраните проблема или актуализирайте данните си за плащане. След като се актуализира информацията за плащане, Mattermost ще се опита да уреди неплатеното салдо."
+    "translation": "За да осигурите непрекъснат абонамент за Prossell Cloud, моля, свържете се с вашата финансова институция, за да отстраните проблема или актуализирайте данните си за плащане. След като се актуализира информацията за плащане, Prossell ще се опита да уреди неплатеното салдо."
   },
   {
     "id": "api.templates.payment_failed.info2",
@@ -4281,7 +4281,7 @@
   },
   {
     "id": "api.templates.payment_failed.info1",
-    "translation": "Вашата финансова институция отказа плащане от вашата {{.CardBrand}} **** {{.LastFour}}, свързана с вашето работно пространство в Mattermost Cloud."
+    "translation": "Вашата финансова институция отказа плащане от вашата {{.CardBrand}} **** {{.LastFour}}, свързана с вашето работно пространство в Prossell Cloud."
   },
   {
     "id": "api.templates.password_change_subject",
@@ -4301,11 +4301,11 @@
   },
   {
     "id": "api.templates.over_limit_suspended_title",
-    "translation": "Mattermost облачното работно пространство е спряно"
+    "translation": "Prossell облачното работно пространство е спряно"
   },
   {
     "id": "api.templates.over_limit_suspended_subject",
-    "translation": "Абонаментът ви за Mattermost Cloud беше спрян"
+    "translation": "Абонаментът ви за Prossell Cloud беше спрян"
   },
   {
     "id": "api.templates.over_limit_suspended_info2",
@@ -4321,7 +4321,7 @@
   },
   {
     "id": "api.templates.over_limit_subject",
-    "translation": "Mattermost Cloud работното пространство превишава потребителското ограничение"
+    "translation": "Prossell Cloud работното пространство превишава потребителското ограничение"
   },
   {
     "id": "api.templates.over_limit_info2",
@@ -4329,7 +4329,7 @@
   },
   {
     "id": "api.templates.over_limit_info1",
-    "translation": "Изглежда, че имате повече от 10 потребители във вашето работно пространство, което е извън ограниченията на безплатното ниво в Mattermost Cloud Professional. За да избегнете прекъсвания във вашето работно пространство Mattermost, моля надстройте."
+    "translation": "Изглежда, че имате повече от 10 потребители във вашето работно пространство, което е извън ограниченията на безплатното ниво в Prossell Cloud Professional. За да избегнете прекъсвания във вашето работно пространство Prossell, моля надстройте."
   },
   {
     "id": "api.templates.over_limit_fix_now",
@@ -4337,11 +4337,11 @@
   },
   {
     "id": "api.templates.over_limit_90_days_title",
-    "translation": "Спирането на работното ви пространство в Mattermost Cloud е насрочено за утре"
+    "translation": "Спирането на работното ви пространство в Prossell Cloud е насрочено за утре"
   },
   {
     "id": "api.templates.over_limit_90_days_subject",
-    "translation": "Абонаментът ви за Mattermost Cloud скоро ще бъде спрян"
+    "translation": "Абонаментът ви за Prossell Cloud скоро ще бъде спрян"
   },
   {
     "id": "api.templates.over_limit_90_days_info4",
@@ -4357,7 +4357,7 @@
   },
   {
     "id": "api.templates.over_limit_90_days_info1",
-    "translation": "Това е последно напомняне, че не сме получили плащане за вашето работно пространство Mattermost Cloud, то е просрочено от {{.OverLimitDate}}. Утре ще спрем услугата ви."
+    "translation": "Това е последно напомняне, че не сме получили плащане за вашето работно пространство Prossell Cloud, то е просрочено от {{.OverLimitDate}}. Утре ще спрем услугата ви."
   },
   {
     "id": "api.templates.over_limit_7_days_title",
@@ -4365,19 +4365,19 @@
   },
   {
     "id": "api.templates.over_limit_7_days_subject",
-    "translation": "Плащането е просрочено за вашия Mattermost Cloud абонамент"
+    "translation": "Плащането е просрочено за вашия Prossell Cloud абонамент"
   },
   {
     "id": "api.templates.over_limit_7_days_info1",
-    "translation": "Mattermost не можа да обработи последното Ви автоматично плащане. За да поддържате услугата си активна, моля, добавете данните за плащане възможно най-скоро или услугата Ви може да бъде спряна."
+    "translation": "Prossell не можа да обработи последното Ви автоматично плащане. За да поддържате услугата си активна, моля, добавете данните за плащане възможно най-скоро или услугата Ви може да бъде спряна."
   },
   {
     "id": "api.templates.over_limit_30_days_title",
-    "translation": "Спиране на Mattermost облачното работно пространство"
+    "translation": "Спиране на Prossell облачното работно пространство"
   },
   {
     "id": "api.templates.over_limit_30_days_subject",
-    "translation": " Действайте, за да запазите абонамента си за Mattermost Cloud"
+    "translation": " Действайте, за да запазите абонамента си за Prossell Cloud"
   },
   {
     "id": "api.templates.over_limit_30_days_info2_item3",
@@ -4397,7 +4397,7 @@
   },
   {
     "id": "api.templates.over_limit_30_days_info1",
-    "translation": "Все още има време да поддържате работното си пространство на Mattermost Cloud активно чрез разрешаване на проблема с начина на плащане. За да избегнете спиране, актуализирайте начина си на плащане."
+    "translation": "Все още има време да поддържате работното си пространство на Prossell Cloud активно чрез разрешаване на проблема с начина на плащане. За да избегнете спиране, актуализирайте начина си на плащане."
   },
   {
     "id": "api.templates.over_limit_14_days_title",
@@ -4405,11 +4405,11 @@
   },
   {
     "id": "api.templates.over_limit_14_days_subject",
-    "translation": "Плащането е просрочено за вашия Mattermost Cloud абонамент"
+    "translation": "Плащането е просрочено за вашия Prossell Cloud абонамент"
   },
   {
     "id": "api.templates.over_limit_14_days_info1",
-    "translation": "Само напомняне, че не сме получили плащане за вашия Mattermost абонамент, фактуриран на {{.OverLimitDate}}. Скоро ще започнем процес за спиране на вашата услуга, ако не бъде получено плащане."
+    "translation": "Само напомняне, че не сме получили плащане за вашия Prossell абонамент, фактуриран на {{.OverLimitDate}}. Скоро ще започнем процес за спиране на вашата услуга, ако не бъде получено плащане."
   },
   {
     "id": "api.templates.mfa_deactivated_body.title",
@@ -4453,7 +4453,7 @@
   },
   {
     "id": "api.templates.invite_body.extra_info",
-    "translation": "Mattermost ви позволява да споделяте съобщения и файлове от вашия компютър или телефон, с незабавно търсене и архивиране. След като се присъедините към [[{{.TeamDisplayName}}]], можете да влезете в новия си екип и да получите достъп до тези функции по всяко време от уеб адреса:"
+    "translation": "Prossell ви позволява да споделяте съобщения и файлове от вашия компютър или телефон, с незабавно търсене и архивиране. След като се присъедините към [[{{.TeamDisplayName}}]], можете да влезете в новия си екип и да получите достъп до тези функции по всяко време от уеб адреса:"
   },
   {
     "id": "api.templates.invite_body.button",
@@ -4533,7 +4533,7 @@
   },
   {
     "id": "api.templates.copyright",
-    "translation": "© 2020 Mattermost, Inc. 855 El Camino Real, 13A-168, Palo Alto, CA, 94301"
+    "translation": "© 2020 Prossell, Inc."
   },
   {
     "id": "api.templates.at_limit_title",
@@ -4541,7 +4541,7 @@
   },
   {
     "id": "api.templates.at_limit_subject",
-    "translation": "Достигнато е Mattermost Cloud ограничението за потребители"
+    "translation": "Достигнато е Prossell Cloud ограничението за потребители"
   },
   {
     "id": "api.templates.at_limit_info2",
@@ -4549,7 +4549,7 @@
   },
   {
     "id": "api.templates.at_limit_info1",
-    "translation": "Изглежда, че вече имате 10 или повече потребители в работното си пространство - това е страхотно! Ако искате да поканите повече членове на екипа, помислете за надграждане на Mattermost Cloud Professional сега."
+    "translation": "Изглежда, че вече имате 10 или повече потребители в работното си пространство - това е страхотно! Ако искате да поканите повече членове на екипа, помислете за надграждане на Prossell Cloud Professional сега."
   },
   {
     "id": "api.team.update_team_scheme.scheme_scope.error",
@@ -5823,7 +5823,7 @@
   },
   {
     "id": "api.license.request_trial_license.no-site-url.app_error",
-    "translation": "Не може да се поиска пробен лиценз. Моля, конфигурирайте URL адрес на сайта в секцията за уеб сървъра на Mattermost Системна конзола."
+    "translation": "Не може да се поиска пробен лиценз. Моля, конфигурирайте URL адрес на сайта в секцията за уеб сървъра на Prossell Системна конзола."
   },
   {
     "id": "api.license.request_trial_license.fail_get_user_count.app_error",
@@ -5839,7 +5839,7 @@
   },
   {
     "id": "api.license.request-trial.bad-request.terms-not-accepted",
-    "translation": "Трябва да приемете Mattermost споразумение за оценка на софтуера и политиката за поверителност, за да поискате лиценз."
+    "translation": "Трябва да приемете Prossell споразумение за оценка на софтуера и политиката за поверителност, за да поискате лиценз."
   },
   {
     "id": "api.license.request-trial.bad-request",
@@ -6449,7 +6449,7 @@
   },
   {
     "id": "api.command_logout.desc",
-    "translation": "Излез от Mattermost"
+    "translation": "Излез от Prossell"
   },
   {
     "id": "api.command_leave.name",
@@ -6561,7 +6561,7 @@
   },
   {
     "id": "api.command_help.desc",
-    "translation": "Отвори помощната страница на Mattermost"
+    "translation": "Отвори помощната страница на Prossell"
   },
   {
     "id": "api.command_groupmsg.permission.app_error",
@@ -7152,7 +7152,7 @@
   },
   {
     "id": "api.slackimport.slack_import.log",
-    "translation": "Mattermost Slack импорт дневник\n"
+    "translation": "Prossell Slack импорт дневник\n"
   },
   {
     "id": "api.slackimport.slack_add_users.unable_import",
@@ -7164,11 +7164,11 @@
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing_failed",
-    "translation": "Slack потребител е обединен с Mattermost потребител поради съвпадащи ел.поща {{.Email}} и потребителско име {{.Username}}., но потребителя не може да бъде добавен към екипа.\n"
+    "translation": "Slack потребител е обединен с Prossell потребител поради съвпадащи ел.поща {{.Email}} и потребителско име {{.Username}}., но потребителя не може да бъде добавен към екипа.\n"
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing",
-    "translation": "Slack потребител е обединен с Mattermost поради съвпадащи ел.поща {{.Email}} и потребителско име {{.Username}}.\n"
+    "translation": "Slack потребител е обединен с Prossell поради съвпадащи ел.поща {{.Email}} и потребителско име {{.Username}}.\n"
   },
   {
     "id": "api.slackimport.slack_add_users.email_pwd",
@@ -7180,7 +7180,7 @@
   },
   {
     "id": "api.slackimport.slack_add_channels.merge",
-    "translation": "Slack канала {{.DisplayName}} вече съществува като активен Mattermost канал. Двата канала са обединени.\n"
+    "translation": "Slack канала {{.DisplayName}} вече съществува като активен Prossell канал. Двата канала са обединени.\n"
   },
   {
     "id": "api.slackimport.slack_add_channels.import_failed",
@@ -7216,7 +7216,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.start_trial.notification_body",
-    "translation": "Вашата система Mattermost вече има няколко екипа. Много отбори имат свой предпочитан начин за координация и сътрудничество, включително как се създават канали, кой може да покани нови съотборници и как се управляват интеграциите. Схемите за отмяна на екипа ви позволяват да персонализирате потребителските разрешения във всеки екип, за да отговорите на техните специфични нужди.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Вашата система Prossell вече има няколко екипа. Много отбори имат свой предпочитан начин за координация и сътрудничество, включително как се създават канали, кой може да покани нови съотборници и как се управляват интеграциите. Схемите за отмяна на екипа ви позволяват да персонализирате потребителските разрешения във всеки екип, за да отговорите на техните специфични нужди.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.notification_title",
@@ -7224,11 +7224,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.notification_body",
-    "translation": "Вашата система Mattermost вече има няколко екипа. Много отбори имат свой предпочитан начин за координация и сътрудничество, включително как се създават канали, кой може да покани нови съотборници и как се управляват интеграциите. Схемите за отмяна на екипа ви позволяват да персонализирате потребителските разрешения във всеки екип, за да отговорите на техните специфични нужди.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Вашата система Prossell вече има няколко екипа. Много отбори имат свой предпочитан начин за координация и сътрудничество, включително как се създават канали, кой може да покани нови съотборници и как се управляват интеграциите. Схемите за отмяна на екипа ви позволяват да персонализирате потребителските разрешения във всеки екип, за да отговорите на техните специфични нужди.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override).\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.contact_us.email_body",
-    "translation": "Mattermost свържете се с нас заявка. Интересно ми е да науча повече за разширени права чрез схеми за екип.\n"
+    "translation": "Prossell свържете се с нас заявка. Интересно ми е да науча повече за разширени права чрез схеми за екип.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_success.message",
@@ -7236,7 +7236,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_body",
-    "translation": "Вашата система Mattermost има голям брой съобщения. Търсенето на база данни по подразбиране на Mattermost започва да показва влошаване на производителността при около 2,5 милиона публикации. При над 5 милиона публикации, Elasticsearch може да помогне да се избегнат значителни проблеми с производителността, като изчаквания при търсене и споменавания. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\n[Научете повече за подобряване на производителността](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Вашата система Prossell има голям брой съобщения. Търсенето на база данни по подразбиране на Prossell започва да показва влошаване на производителността при около 2,5 милиона публикации. При над 5 милиона публикации, Elasticsearch може да помогне да се избегнат значителни проблеми с производителността, като изчаквания при търсене и споменавания. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\n[Научете повече за подобряване на производителността](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_title",
@@ -7244,11 +7244,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_body",
-    "translation": "Вашата система Mattermost има голям брой съобщения. Търсенето на база данни по подразбиране на Mattermost започва да показва влошаване на производителността при около 2,5 милиона публикации. При над 5 милиона публикации, Elasticsearch може да помогне да се избегнат значителни проблеми с производителността, като изчаквания при търсене и споменавания. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\n[Научете повече за подобряване на производителността](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Вашата система Prossell има голям брой съобщения. Търсенето на база данни по подразбиране на Prossell започва да показва влошаване на производителността при около 2,5 милиона публикации. При над 5 милиона публикации, Elasticsearch може да помогне да се избегнат значителни проблеми с производителността, като изчаквания при търсене и споменавания. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\n[Научете повече за подобряване на производителността](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.contact_us.email_body",
-    "translation": "Mattermost свържете се с нас заявка. Интересно ми е да науча повече за подобряване на производителността с Elasticsearch.\n"
+    "translation": "Prossell свържете се с нас заявка. Интересно ми е да науча повече за подобряване на производителността с Elasticsearch.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_success.message",
@@ -7256,7 +7256,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_body",
-    "translation": "Каналите помагат за подобряване на комуникацията, но тъй като потребителите от Mattermost се присъединяват и създават канали, предизвикателството да поддържате системата организирана се увеличава. Разширените права ви позволяват да зададете кои потребители или роли могат да извършват определени действия, включително управление на настройки на канали и членове, използване на @channel или @here за маркиране на широки групи потребители и създаване на нови webhook.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Каналите помагат за подобряване на комуникацията, но тъй като потребителите от Prossell се присъединяват и създават канали, предизвикателството да поддържате системата организирана се увеличава. Разширените права ви позволяват да зададете кои потребители или роли могат да извършват определени действия, включително управление на настройки на канали и членове, използване на @channel или @here за маркиране на широки групи потребители и създаване на нови webhook.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.notification_title",
@@ -7264,11 +7264,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.notification_body",
-    "translation": "Каналите помагат за подобряване на комуникацията, но тъй като потребителите от Mattermost се присъединяват и създават канали, предизвикателството да поддържате системата организирана се увеличава. Разширените права ви позволяват да зададете кои потребители или роли могат да извършват определени действия, включително управление на настройки на канали и членове, използване на @channel или @here за маркиране на широки групи потребители и създаване на нови webhook.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Каналите помагат за подобряване на комуникацията, но тъй като потребителите от Prossell се присъединяват и създават канали, предизвикателството да поддържате системата организирана се увеличава. Разширените права ви позволяват да зададете кои потребители или роли могат да извършват определени действия, включително управление на настройки на канали и членове, използване на @channel или @here за маркиране на широки групи потребители и създаване на нови webhook.\n\n[Научете повече за използването на разширени права](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.contact_us.email_body",
-    "translation": "Mattermost свържете се с нас заявка. Интересно ми е да науча повече за използването на разширени права със системни схеми.\n"
+    "translation": "Prossell свържете се с нас заявка. Интересно ми е да науча повече за използването на разширени права със системни схеми.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_success.message",
@@ -7276,19 +7276,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_body",
-    "translation": "Mattermost настоятелно препоръчва инсталациите с над 500 потребители да се възползват от функции като управление на потребители, клъстеризиране на сървъри и мониторинг на производителността. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Prossell настоятелно препоръчва инсталациите с над 500 потребители да се възползват от функции като управление на потребители, клъстеризиране на сървъри и мониторинг на производителността. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_title",
-    "translation": "Мащабиране с Mattermost"
+    "translation": "Мащабиране с Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_body",
-    "translation": "Mattermost настоятелно препоръчва инсталации с над 500 потребители да се възползват от функции като управление на потребители, клъстеризиране на сървъри и мониторинг на производителността. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\nС натискане върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Научете повече](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Prossell настоятелно препоръчва инсталации с над 500 потребители да се възползват от функции като управление на потребители, клъстеризиране на сървъри и мониторинг на производителността. Свържете се с нас, за да научите повече и да ни уведомите как можем да помогнем.\n\nС натискане върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Научете повече](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.contact_us.email_body",
-    "translation": "Mattermost свържете се с нас заявка. Сега екипът ми има 500 потребители и обмислям Mattermost корпоративна версия.\n"
+    "translation": "Prossell свържете се с нас заявка. Сега екипът ми има 500 потребители и обмислям Prossell корпоративна версия.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_title",
@@ -7300,15 +7300,15 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_body",
-    "translation": "Тъй като толкова много разговори се случват в Mattermost, може да бъде предизвикателство да знаете къде да търсите важна информация. Ако искате да излъчите съобщение до голяма аудитория, можете да настроите канали за съобщения само за четене, където всеки може да се присъедини, но само администраторите на каналите могат да публикуват съобщения.\n\n[Научете повече за създаването на канали за съобщения само за четене](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Тъй като толкова много разговори се случват в Prossell, може да бъде предизвикателство да знаете къде да търсите важна информация. Ако искате да излъчите съобщение до голяма аудитория, можете да настроите канали за съобщения само за четене, където всеки може да се присъедини, но само администраторите на каналите могат да публикуват съобщения.\n\n[Научете повече за създаването на канали за съобщения само за четене](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.notification_body",
-    "translation": "Тъй като толкова много разговори се случват в Mattermost, може да бъде предизвикателство да знаете къде да търсите важна информация. Ако искате да излъчите съобщение до голяма аудитория, можете да настроите канали за съобщения само за четене, където всеки може да се присъедини, но само администраторите на каналите могат да публикуват съобщения.\n\n[Научете повече за създаването на канали за съобщения само за четене](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Тъй като толкова много разговори се случват в Prossell, може да бъде предизвикателство да знаете къде да търсите важна информация. Ако искате да излъчите съобщение до голяма аудитория, можете да настроите канали за съобщения само за четене, където всеки може да се присъедини, но само администраторите на каналите могат да публикуват съобщения.\n\n[Научете повече за създаването на канали за съобщения само за четене](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\nКато натиснете върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.contact_us.email_body",
-    "translation": "Mattermost свържете се с нас заявка. Интересно ми е да науча повече за създаването на канали за съобщения само за четене.\n"
+    "translation": "Prossell свържете се с нас заявка. Интересно ми е да науча повече за създаването на канали за съобщения само за четене.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_success.message",
@@ -7316,19 +7316,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_body",
-    "translation": "Вашата система Mattermost вече има 200 потребители. Когато свържете Mattermost с доставчика за еднократно удостоверяване на вашата организация, потребителите имат достъп до Mattermost, без да се налага да въвеждат повторно своите идентификационни данни. Препоръчваме ви да интегрирате вашия доставчик на SAML 2.0 с вашия сървър Mattermost.[Научете повече за интегрирането със SAML 2.0](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Вашата система Prossell вече има 200 потребители. Когато свържете Prossell с доставчика за еднократно удостоверяване на вашата организация, потребителите имат достъп до Prossell, без да се налага да въвеждат повторно своите идентификационни данни. Препоръчваме ви да интегрирате вашия доставчик на SAML 2.0 с вашия сървър Prossell.[Научете повече за интегрирането със SAML 2.0](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell Споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_title",
-    "translation": "Мащабиране с Mattermost"
+    "translation": "Мащабиране с Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_body",
-    "translation": "Вашата система Mattermost вече има 200 потребители. Когато свържете Mattermost с доставчика за влизане на вашата организация, потребителите могат да получат достъп до Mattermost, без да се налага да въвеждат повторно своите идентификационни данни. Препоръчваме ви да интегрирате вашия доставчик на SAML 2.0 с вашия сървър Mattermost. [Научете повече за интегрирането със SAML 2.0](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)\n\nС натискане върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Научете повече](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Вашата система Prossell вече има 200 потребители. Когато свържете Prossell с доставчика за влизане на вашата организация, потребителите могат да получат достъп до Prossell, без да се налага да въвеждат повторно своите идентификационни данни. Препоръчваме ви да интегрирате вашия доставчик на SAML 2.0 с вашия сървър Prossell. [Научете повече за интегрирането със SAML 2.0](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)\n\nС натискане върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Научете повече](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.contact_us.email_body",
-    "translation": "Mattermost Свържете се с нас. Сега екипът ми има 200 потребители и обмислям Mattermost Корпоративна версия.\n"
+    "translation": "Prossell Свържете се с нас. Сега екипът ми има 200 потребители и обмислям Prossell Корпоративна версия.\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_success.message",
@@ -7336,19 +7336,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_body",
-    "translation": "Вашата система Mattermost има над 100 потребители. С нарастването на вашата потребителска база предоставянето на нови профили може да отнеме много време. Препоръчваме ви да интегрирате Active Directory / LDAP на вашата организация, което ще позволи на всеки с профил да има достъп до Mattermost.\n\n[Научете повече за интегрирането с AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Mattermost споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Политика на поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Вашата система Prossell има над 100 потребители. С нарастването на вашата потребителска база предоставянето на нови профили може да отнеме много време. Препоръчваме ви да интегрирате Active Directory / LDAP на вашата организация, което ще позволи на всеки с профил да има достъп до Prossell.\n\n[Научете повече за интегрирането с AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nС натискането върху Старт пробна версия, аз се съгласявам с [Prossell споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Политика на поверителност](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_title",
-    "translation": "Мащабиране с Mattermost"
+    "translation": "Мащабиране с Prossell"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_body",
-    "translation": "Вашата система Mattermost има над 100 потребители. С нарастването на вашата потребителска база предоставянето на нови профили може да отнеме много време. Препоръчваме ви да интегрирате Active Directory / LDAP на вашата организация, което ще позволи на всеки с профил да има достъп до Mattermost.\n\n[Научете повече за интегрирането с AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nКогато натиснете върху Свържете се с нас, ще споделите информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Вашата система Prossell има над 100 потребители. С нарастването на вашата потребителска база предоставянето на нови профили може да отнеме много време. Препоръчваме ви да интегрирате Active Directory / LDAP на вашата организация, което ще позволи на всеки с профил да има достъп до Prossell.\n\n[Научете повече за интегрирането с AD/LDAP](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\nКогато натиснете върху Свържете се с нас, ще споделите информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.contact_us.email_body",
-    "translation": "Mattermost Свържете с нас заявка. Сега екипът ми има 100 потребители и обмислям Mattermost корпоративна версия.\n"
+    "translation": "Prossell Свържете с нас заявка. Сега екипът ми има 100 потребители и обмислям Prossell корпоративна версия.\n"
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial_notification_success.message",
@@ -7356,7 +7356,7 @@
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial.notification_body",
-    "translation": "Вашата система Mattermost има активирано многофакторно удостоверяване, което дава на потребителите избор да защитят своите акаунти с допълнителни средства за удостоверяване, освен паролата. За да подобрите сигурността в системата, можете да изискате всички акаунти на Mattermost да използват многофакторно удостоверяване.\n\n[Научете повече за изискване на многофакторно удостоверяване](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nС натискането върху Започни пробен период, се съгласяте с. [Mattermost споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
+    "translation": "Вашата система Prossell има активирано многофакторно удостоверяване, което дава на потребителите избор да защитят своите акаунти с допълнителни средства за удостоверяване, освен паролата. За да подобрите сигурността в системата, можете да изискате всички акаунти на Prossell да използват многофакторно удостоверяване.\n\n[Научете повече за изискване на многофакторно удостоверяване](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nС натискането върху Започни пробен период, се съгласяте с. [Prossell споразумение за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [Privacy Policy](https://mattermost.com/privacy-policy/), и получаването на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.mfa.notification_title",
@@ -7364,11 +7364,11 @@
   },
   {
     "id": "api.server.warn_metric.mfa.notification_body",
-    "translation": "Вашата система Mattermost има активирано многофакторно удостоверяване, което дава на потребителите избор да защитят своите акаунти с допълнителни средства за удостоверяване, освен паролата. За да подобрите сигурността в системата, можете да изискате всички акаунти на Mattermost да използват многофакторно удостоверяване.\n\n[Научете повече за изискване на многофакторно удостоверяване](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nС натискането върху Свържете се с нас, ще споделяте информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Вашата система Prossell има активирано многофакторно удостоверяване, което дава на потребителите избор да защитят своите акаунти с допълнителни средства за удостоверяване, освен паролата. За да подобрите сигурността в системата, можете да изискате всички акаунти на Prossell да използват многофакторно удостоверяване.\n\n[Научете повече за изискване на многофакторно удостоверяване](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication). \n\nС натискането върху Свържете се с нас, ще споделяте информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.mfa.contact_us.email_body",
-    "translation": "Заявка Mattermost свържете с нас. Интересно ми е да науча повече за използването на многофакторно удостоверяване.\n"
+    "translation": "Заявка Prossell свържете с нас. Интересно ми е да науча повече за използването на многофакторно удостоверяване.\n"
   },
   {
     "id": "api.server.warn_metric.email_us",
@@ -7380,7 +7380,7 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.start_trial.notification_body",
-    "translation": "Проектите често включват хора както от организацията, така и извън нея. С профилите за гости можете да привлечете външни партньори във вашата система Mattermost и да посочите с кого да работят и какво могат да виждат.\n\n[Научете повече за разрешаване акаунтите за гости](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)\n\nС натискането върху Старт пробна версия, се съгласявам с [споразумение на Mattermost за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаване на ел.поща за продукта."
+    "translation": "Проектите често включват хора както от организацията, така и извън нея. С профилите за гости можете да привлечете външни партньори във вашата система Prossell и да посочите с кого да работят и какво могат да виждат.\n\n[Научете повече за разрешаване акаунтите за гости](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)\n\nС натискането върху Старт пробна версия, се съгласявам с [споразумение на Prossell за оценка на софтуера](https://mattermost.com/software-evaluation-agreement/), [политика за поверителност](https://mattermost.com/privacy-policy/), и получаване на ел.поща за продукта."
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_title",
@@ -7388,11 +7388,11 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_body",
-    "translation": "Проектите често включват хора както от организацията, така и извън нея. С профилите за гости можете да привлечете външни партньори във вашата система Mattermost и да посочите с кого да работят и какво могат да виждат.\n\n[Научете повече за разрешаване акаунтите за гости](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nС натискането върху Свържете се с нас, ще споделяте информацията си с Mattermost, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "Проектите често включват хора както от организацията, така и извън нея. С профилите за гости можете да привлечете външни партньори във вашата система Prossell и да посочите с кого да работят и какво могат да виждат.\n\n[Научете повече за разрешаване акаунтите за гости](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts).\n\nС натискането върху Свържете се с нас, ще споделяте информацията си с Prossell, Inc. [Виж още](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.email_domain.contact_us.email_body",
-    "translation": "Заявка Mattermost свържете с нас. Интересно ми е да науча повече за използването на профили за гости.\n"
+    "translation": "Заявка Prossell свържете с нас. Интересно ми е да науча повече за използването на профили за гости.\n"
   },
   {
     "id": "api.server.warn_metric.contacting_us",
@@ -7408,7 +7408,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_success.message",
-    "translation": "Благодарим Ви, че се свързахте с Mattermost. Ще се свържем с Вас скоро."
+    "translation": "Благодарим Ви, че се свързахте с Prossell. Ще се свържем с Вас скоро."
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_failure.message",
@@ -7420,7 +7420,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_subject",
-    "translation": "Mattermost свържете се с нас заявка"
+    "translation": "Prossell свържете се с нас заявка"
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_site_url_header",
@@ -7864,7 +7864,7 @@
   },
   {
     "id": "api.command.invite_people.desc",
-    "translation": "Изпратете ел.поща с покана във вашия екип на Mattermost"
+    "translation": "Изпратете ел.поща с покана във вашия екип на Prossell"
   },
   {
     "id": "api.command.execute_command.start.app_error",
@@ -8184,7 +8184,7 @@
   },
   {
     "id": "api.bot.teams_channels.add_message_mobile",
-    "translation": "Моля, добавете ме към екипи и канали, в които искате да взаимодействам. За целта използвайте браузър или Mattermost настолното приложение."
+    "translation": "Моля, добавете ме към екипи и канали, в които искате да взаимодействам. За целта използвайте браузър или Prossell настолното приложение."
   },
   {
     "id": "api.bot.set_bot_icon_image.too_large.app_error",
@@ -8248,7 +8248,7 @@
   },
   {
     "id": "api.admin.test_email.subject",
-    "translation": "Mattermost - Тестване на настройките за ел.поща"
+    "translation": "Prossell - Тестване на настройките за ел.поща"
   },
   {
     "id": "api.admin.test_email.reenter_password",
@@ -8260,7 +8260,7 @@
   },
   {
     "id": "api.admin.test_email.body",
-    "translation": "Изглежда вашата Mattermost ел.поща е настроена правилно!"
+    "translation": "Изглежда вашата Prossell ел.поща е настроена правилно!"
   },
   {
     "id": "api.admin.saml.set_certificate_from_metadata.missing_content_type.app_error",

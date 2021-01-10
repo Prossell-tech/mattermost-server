@@ -85,7 +85,7 @@
   },
   {
     "id": "api.admin.test_email.body",
-    "translation": "看来你的 Mattermost 邮箱设置成功了！"
+    "translation": "看来你的 Prossell 邮箱设置成功了！"
   },
   {
     "id": "api.admin.test_email.missing_server",
@@ -97,7 +97,7 @@
   },
   {
     "id": "api.admin.test_email.subject",
-    "translation": "Mattermost - 测试邮箱设置"
+    "translation": "Prossell - 测试邮箱设置"
   },
   {
     "id": "api.admin.test_s3.missing_s3_bucket",
@@ -353,7 +353,7 @@
   },
   {
     "id": "api.command.invite_people.desc",
-    "translation": "发送一封邀请邮件给你的Mattermost团队"
+    "translation": "发送一封邀请邮件给你的Prossell团队"
   },
   {
     "id": "api.command.invite_people.email_invitations_off",
@@ -627,7 +627,7 @@
   },
   {
     "id": "api.command_help.desc",
-    "translation": "打开 Mattermost 帮助页面"
+    "translation": "打开 Prossell 帮助页面"
   },
   {
     "id": "api.command_help.name",
@@ -731,7 +731,7 @@
   },
   {
     "id": "api.command_logout.desc",
-    "translation": "注销Mattermost"
+    "translation": "注销Prossell"
   },
   {
     "id": "api.command_logout.name",
@@ -1579,11 +1579,11 @@
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing",
-    "translation": "Slack 用户已和拥有邮箱地址 {{.Email}} 和用户名 {{.Username}} 的 Mattermost 用户合并。\r\n"
+    "translation": "Slack 用户已和拥有邮箱地址 {{.Email}} 和用户名 {{.Username}} 的 Prossell 用户合并。\r\n"
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing_failed",
-    "translation": "Slack 用户已和现有邮箱地址 {{.Email}} 和用户名 {{.Username}} 的 Mattermost 用户合并，但没法添加用户到他们的团队。\r\n"
+    "translation": "Slack 用户已和现有邮箱地址 {{.Email}} 和用户名 {{.Username}} 的 Prossell 用户合并，但没法添加用户到他们的团队。\r\n"
   },
   {
     "id": "api.slackimport.slack_add_users.missing_email_address",
@@ -1595,7 +1595,7 @@
   },
   {
     "id": "api.slackimport.slack_import.log",
-    "translation": "Mattermost Slack 导入日志 \r\n"
+    "translation": "Prossell Slack 导入日志 \r\n"
   },
   {
     "id": "api.slackimport.slack_import.note1",
@@ -1867,7 +1867,7 @@
   },
   {
     "id": "api.templates.invite_body.extra_info",
-    "translation": "Mattermost 允许您通过电脑、电话分享消息和文件，即时查找和归档。当你加入[[{{.TeamDisplayName}}]]后，你可以登录到你的新团队并在任何时候从网络地址访问这些功能："
+    "translation": "Prossell 允许您通过电脑、电话分享消息和文件，即时查找和归档。当你加入[[{{.TeamDisplayName}}]]后，你可以登录到你的新团队并在任何时候从网络地址访问这些功能："
   },
   {
     "id": "api.templates.invite_body.info",
@@ -2011,7 +2011,7 @@
   },
   {
     "id": "api.templates.welcome_body.info3",
-    "translation": "Mattermost 允许您通过PC或手机分享信息和文件，即时搜索和归档。"
+    "translation": "Prossell 允许您通过PC或手机分享信息和文件，即时搜索和归档。"
   },
   {
     "id": "api.templates.welcome_body.title",
@@ -3387,7 +3387,7 @@
   },
   {
     "id": "ent.ldap.do_login.user_filtered.app_error",
-    "translation": "您的 AD/LDAP 账号没有使用此 Mattermost 服务器的权限。请向您的系统管理员询问确认 AD/LDAP 用户过滤器。"
+    "translation": "您的 AD/LDAP 账号没有使用此 Prossell 服务器的权限。请向您的系统管理员询问确认 AD/LDAP 用户过滤器。"
   },
   {
     "id": "ent.ldap.do_login.user_not_registered.app_error",
@@ -3407,7 +3407,7 @@
   },
   {
     "id": "ent.ldap.syncronize.search_failure.app_error",
-    "translation": "从 AD/LDAP 搜索用户失败。请测试 Mattermost 服务器是否可以连接您的 AD/LDAP 服务器后重新尝试。"
+    "translation": "从 AD/LDAP 搜索用户失败。请测试 Prossell 服务器是否可以连接您的 AD/LDAP 服务器后重新尝试。"
   },
   {
     "id": "ent.ldap.validate_filter.app_error",
@@ -3503,7 +3503,7 @@
   },
   {
     "id": "ent.migration.migratetosaml.username_already_used_by_other_user",
-    "translation": "用户名已被其他 Mattermost 用户使用。"
+    "translation": "用户名已被其他 Prossell 用户使用。"
   },
   {
     "id": "ent.saml.attribute.app_error",
@@ -3603,7 +3603,7 @@
   },
   {
     "id": "mattermost.bulletin.subject",
-    "translation": "Mattermost 安全公告"
+    "translation": "Prossell 安全公告"
   },
   {
     "id": "mfa.activate.authenticate.app_error",
@@ -4795,7 +4795,7 @@
   },
   {
     "id": "oauth.gitlab.tos.error",
-    "translation": "GitLab 的使用条款已更新。请到 gitlab.com 接受新的使用条款后再尝试登入 Mattermost。"
+    "translation": "GitLab 的使用条款已更新。请到 gitlab.com 接受新的使用条款后再尝试登入 Prossell。"
   },
   {
     "id": "plugin.api.update_user_status.bad_status",
@@ -5967,7 +5967,7 @@
   },
   {
     "id": "api.templates.remove_expired_license.subject",
-    "translation": "Mattermost 企业许可证已停用。"
+    "translation": "Prossell 企业许可证已停用。"
   },
   {
     "id": "api.user.create_user.guest_accounts.disabled.app_error",
@@ -6147,11 +6147,11 @@
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support_version",
-    "translation": "您的浏览器不再被 Mattermost 支持"
+    "translation": "您的浏览器不再被 Prossell 支持"
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support",
-    "translation": "Mattermost 不再支持此浏览器"
+    "translation": "Prossell 不再支持此浏览器"
   },
   {
     "id": "web.error.unsupported_browser.min_os_version.windows",
@@ -6195,7 +6195,7 @@
   },
   {
     "id": "web.error.unsupported_browser.download_app_or_upgrade_browser",
-    "translation": "下载 Mattermost 应用或使用支持的浏览器以获得更好的体验。"
+    "translation": "下载 Prossell 应用或使用支持的浏览器以获得更好的体验。"
   },
   {
     "id": "web.error.unsupported_browser.download",
@@ -6499,11 +6499,11 @@
   },
   {
     "id": "api.license.request_trial_license.no-site-url.app_error",
-    "translation": "无法请求试用许可证。请在 Mattermost 系统控制台设置站点网址。"
+    "translation": "无法请求试用许可证。请在 Prossell 系统控制台设置站点网址。"
   },
   {
     "id": "api.license.request-trial.bad-request.terms-not-accepted",
-    "translation": "您在请求许可证前必须接受 Mattermost Software Evaluation Agreement 以及隐私政策。"
+    "translation": "您在请求许可证前必须接受 Prossell Software Evaluation Agreement 以及隐私政策。"
   },
   {
     "id": "api.invalid_channel",
@@ -6611,11 +6611,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_title",
-    "translation": "与 Mattermost 扩展"
+    "translation": "与 Prossell 扩展"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_title",
-    "translation": "与 Mattermost 扩展"
+    "translation": "与 Prossell 扩展"
   },
   {
     "id": "api.server.warn_metric.contacting_us",
@@ -6627,7 +6627,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_success.message",
-    "translation": "感谢您联系 Mattermost，我们会尽快与您联络。"
+    "translation": "感谢您联系 Prossell，我们会尽快与您联络。"
   },
   {
     "id": "api.server.warn_metric.bot_response.notification_failure.message",
@@ -7139,11 +7139,11 @@
   },
   {
     "id": "app.system.warn_metric.bot_displayname",
-    "translation": "Mattermost Advisor"
+    "translation": "Prossell Advisor"
   },
   {
     "id": "app.system.warn_metric.bot_description",
-    "translation": "[了解更多关于 Mattermost Advisor](https://about.mattermost.com/default-channel-handle-documentation)"
+    "translation": "[了解更多关于 Prossell Advisor](https://about.mattermost.com/default-channel-handle-documentation)"
   },
   {
     "id": "app.post.search.app_error",
@@ -7367,31 +7367,31 @@
   },
   {
     "id": "api.upgrade_to_enterprise_status.signature.app_error",
-    "translation": "Mattermost 无法升级至企业版。无法验证下载的二进制文件的数字签名。"
+    "translation": "Prossell 无法升级至企业版。无法验证下载的二进制文件的数字签名。"
   },
   {
     "id": "api.upgrade_to_enterprise_status.app_error",
-    "translation": "Mattermost 无法升级至企业版。"
+    "translation": "Prossell 无法升级至企业版。"
   },
   {
     "id": "api.upgrade_to_enterprise.system_not_supported.app_error",
-    "translation": "Mattermost 无法升级至企业版。此功能只能用于 x86-64 构架的 Linux 系统。"
+    "translation": "Prossell 无法升级至企业版。此功能只能用于 x86-64 构架的 Linux 系统。"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user.app_error",
-    "translation": "Mattermost 无法升级至企业版。Mattermost 系统用户 {{.MattermostUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Mattermost。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
+    "translation": "Prossell 无法升级至企业版。Prossell 系统用户 {{.ProssellUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Prossell。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-user-and-permission.app_error",
-    "translation": "Mattermost 无法升级至企业版。Mattermost 系统用户 {{.MattermostUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchown {{.MattermostUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Mattermost。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell 无法升级至企业版。Prossell 系统用户 {{.ProssellUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchown {{.ProssellUsername}} \"{{.Path}}\"\nchmod +w \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Prossell。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchown {{.FileUsername}} \"{{.Path}}\"\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.invalid-permission.app_error",
-    "translation": "Mattermost 无法升级至企业版。Mattermost 系统用户 {{.MattermostUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchmod +w \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Mattermost。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchmod -w \"{{.Path}}\"\n```"
+    "translation": "Prossell 无法升级至企业版。Prossell 系统用户 {{.ProssellUsername}} 没有写入二进制文件权限。系统管理员可在服务器上运行以下指令更新文件权限：\n\n```\nchmod +w \"{{.Path}}\"\n```\n\n更新文件权限后，请重新尝试升级 Prossell。当您升级并重启后，请务必恢复二进制文件权限：\n\n```\nchmod -w \"{{.Path}}\"\n```"
   },
   {
     "id": "api.upgrade_to_enterprise.generic_error.app_error",
-    "translation": "Mattermost 无法升级至企业版。"
+    "translation": "Prossell 无法升级至企业版。"
   },
   {
     "id": "api.upgrade_to_enterprise.app_error",
@@ -7399,15 +7399,15 @@
   },
   {
     "id": "api.upgrade_to_enterprise.already-enterprise.app_error",
-    "translation": "您不能升级因为您已正在运行 Mattermost 企业版。"
+    "translation": "您不能升级因为您已正在运行 Prossell 企业版。"
   },
   {
     "id": "api.upgrade_to_enterprise.already-done.app_error",
-    "translation": "您已升级至 Mattermost 企业版。请重启以完成升级。"
+    "translation": "您已升级至 Prossell 企业版。请重启以完成升级。"
   },
   {
     "id": "api.templates.warn_metric_ack.subject",
-    "translation": "Mattermost 联络我们请求"
+    "translation": "Prossell 联络我们请求"
   },
   {
     "id": "api.templates.warn_metric_ack.footer",
@@ -7439,11 +7439,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.notification_body",
-    "translation": "Mattermost 强烈建议超过 500 个用户的部署使用用户管理，服务器群集和性能监视等功能。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多]（https://mattermost.com/pl/default-admin-advisory）"
+    "translation": "Prossell 强烈建议超过 500 个用户的部署使用用户管理，服务器群集和性能监视等功能。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多]（https://mattermost.com/pl/default-admin-advisory）"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.notification_body",
-    "translation": "您的 Mattermost 系统现在有 200 个用户。当您将 Mattermost 与组织的单一登录提供商连接时，用户无需重新输入凭据即可访问 Mattermost。我们建议您将 SAML 2.0 提供商与 Mattermost 服务器集成。[了解有关与 SAML 2.0 集成的更多信息](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)。\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "您的 Prossell 系统现在有 200 个用户。当您将 Prossell 与组织的单一登录提供商连接时，用户无需重新输入凭据即可访问 Prossell。我们建议您将 SAML 2.0 提供商与 Prossell 服务器集成。[了解有关与 SAML 2.0 集成的更多信息](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)。\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.email_us",
@@ -7455,7 +7455,7 @@
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_subject",
-    "translation": "Mattermost 联络我们请求"
+    "translation": "Prossell 联络我们请求"
   },
   {
     "id": "api.server.warn_metric.bot_response.mailto_registered_users_header",
@@ -7527,7 +7527,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我有兴趣了解有关将高级权限与系统方案结合使用的更多信息。\n"
+    "translation": "Prossell 与我们联系的请求。我有兴趣了解有关将高级权限与系统方案结合使用的更多信息。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_success.message",
@@ -7535,11 +7535,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.start_trial.notification_body",
-    "translation": "Mattermost 强烈建议超过 500 个用户的部署使用用户管理，服务器群集和性能监视等功能。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
+    "translation": "Prossell 强烈建议超过 500 个用户的部署使用用户管理，服务器群集和性能监视等功能。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_500.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我的团队现在有 500 个用户，我正在考虑使用 Mattermost 企业版。\n"
+    "translation": "Prossell 与我们联系的请求。我的团队现在有 500 个用户，我正在考虑使用 Prossell 企业版。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_title",
@@ -7551,15 +7551,15 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.start_trial.notification_body",
-    "translation": "当在 Mattermost 上有众多对话时，知道在哪里查找重要信息可能是一个挑战。如果要向大量受众广播消息，则可以设置只读的公告频道，任何人都可以加入，但只有频道管理员可以发布消息。\n\n[了解有关创建只读公告频道的更多信息](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
+    "translation": "当在 Prossell 上有众多对话时，知道在哪里查找重要信息可能是一个挑战。如果要向大量受众广播消息，则可以设置只读的公告频道，任何人都可以加入，但只有频道管理员可以发布消息。\n\n[了解有关创建只读公告频道的更多信息](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.notification_body",
-    "translation": "当在 Mattermost 上有众多对话时，知道在哪里查找重要信息可能是一个挑战。如果要向大量受众广播消息，则可以设置只读的公告频道，任何人都可以加入，但只有频道管理员可以发布消息。\n\n[了解有关创建只读公告频道的更多信息](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "当在 Prossell 上有众多对话时，知道在哪里查找重要信息可能是一个挑战。如果要向大量受众广播消息，则可以设置只读的公告频道，任何人都可以加入，但只有频道管理员可以发布消息。\n\n[了解有关创建只读公告频道的更多信息](https://www.mattermost.com/docs-channel-moderation/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=channel-moderation)\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_300.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我有兴趣了解有关创建只读公告频道的更多信息。\n"
+    "translation": "Prossell 与我们联系的请求。我有兴趣了解有关创建只读公告频道的更多信息。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_success.message",
@@ -7567,11 +7567,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.start_trial.notification_body",
-    "translation": "您的 Mattermost 系统现在有 200 个用户。当您将 Mattermost 与组织的单一登录提供商连接时，用户无需重新输入凭据即可访问 Mattermost。我们建议您将 SAML 2.0 提供商与 Mattermost 服务器集成。[了解有关与 SAML 2.0 集成的更多信息](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)。\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议t](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
+    "translation": "您的 Prossell 系统现在有 200 个用户。当您将 Prossell 与组织的单一登录提供商连接时，用户无需重新输入凭据即可访问 Prossell。我们建议您将 SAML 2.0 提供商与 Prossell 服务器集成。[了解有关与 SAML 2.0 集成的更多信息](https://www.mattermost.com/docs-saml/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=saml)。\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议t](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_200.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我的团队现在有 200 个用户，我正在考虑使用 Mattermost 企业版。\n"
+    "translation": "Prossell 与我们联系的请求。我的团队现在有 200 个用户，我正在考虑使用 Prossell 企业版。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_success.message",
@@ -7579,19 +7579,19 @@
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.start_trial.notification_body",
-    "translation": "您的 Mattermost 系统拥有 100 多个用户。随着用户群的增长，配置新帐户会变得很耗时。我们建议您集成组织的 Active Directory / LDAP，这将使拥有帐户的任何人都可以访问 Mattermost。\n\n[了解有关与AD / LDAP集成的更多信息](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
+    "translation": "您的 Prossell 系统拥有 100 多个用户。随着用户群的增长，配置新帐户会变得很耗时。我们建议您集成组织的 Active Directory / LDAP，这将使拥有帐户的任何人都可以访问 Prossell。\n\n[了解有关与AD / LDAP集成的更多信息](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_title",
-    "translation": "与 Mattermost 扩展"
+    "translation": "与 Prossell 扩展"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.notification_body",
-    "translation": "您的 Mattermost 系统拥有 100 多个用户。随着用户群的增长，部署新帐户会变得很耗时。我们建议您集成组织的 Active Directory / LDAP，这将使拥有帐户的任何人都可以访问 Mattermost。\n\n[了解有关 与AD / LDAP 集成的更多信息](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "您的 Prossell 系统拥有 100 多个用户。随着用户群的增长，部署新帐户会变得很耗时。我们建议您集成组织的 Active Directory / LDAP，这将使拥有帐户的任何人都可以访问 Prossell。\n\n[了解有关 与AD / LDAP 集成的更多信息](https://www.mattermost.com/docs-adldap/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=adldap)\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_active_users_100.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我的团队现在有 100 个用户，我正在考虑使用 Mattermost 企业版。\n"
+    "translation": "Prossell 与我们联系的请求。我的团队现在有 100 个用户，我正在考虑使用 Prossell 企业版。\n"
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial_notification_success.message",
@@ -7599,7 +7599,7 @@
   },
   {
     "id": "api.server.warn_metric.mfa.start_trial.notification_body",
-    "translation": "您的 Mattermost 系统启用了多重身份验证，让户可以选择使用密码以外的其他身份验证方法来保护自己的帐户。为了提高整个系统的安全性，您可以要求所有 Mattermost 帐户都使用多重身份验证。\n\n[了解有关实施多重身份验证的更多信息](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication)。\n\n单击“开始试用”，即表示我同意 [Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
+    "translation": "您的 Prossell 系统启用了多重身份验证，让户可以选择使用密码以外的其他身份验证方法来保护自己的帐户。为了提高整个系统的安全性，您可以要求所有 Prossell 帐户都使用多重身份验证。\n\n[了解有关实施多重身份验证的更多信息](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication)。\n\n单击“开始试用”，即表示我同意 [Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.mfa.notification_title",
@@ -7607,11 +7607,11 @@
   },
   {
     "id": "api.server.warn_metric.mfa.notification_body",
-    "translation": "您的 Mattermost 系统启用了多重身份验证，让户可以选择使用密码以外的其他身份验证方法来保护自己的帐户。为了提高整个系统的安全性，您可以要求所有 Mattermost 帐户都使用多重身份验证。\n\n[了解有关实施多重身份验证的更多信息](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication)。\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "您的 Prossell 系统启用了多重身份验证，让户可以选择使用密码以外的其他身份验证方法来保护自己的帐户。为了提高整个系统的安全性，您可以要求所有 Prossell 帐户都使用多重身份验证。\n\n[了解有关实施多重身份验证的更多信息](https://www.mattermost.com/docs-multi-factor-authentication/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=multi-factor-authentication)。\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.mfa.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我有兴趣了解有关实施强制多重身份验证。\n"
+    "translation": "Prossell 与我们联系的请求。我有兴趣了解有关实施强制多重身份验证。\n"
   },
   {
     "id": "api.server.warn_metric.email_domain.start_trial_notification_success.message",
@@ -7619,7 +7619,7 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.start_trial.notification_body",
-    "translation": "项目通常涉及组织内部和外部的人员。使用访客帐户，您可以将外部合作伙伴带入您的 Mattermost 系统并指定他们可以与谁合作以及看到什么。\n\n[了解有关启用访客帐户的更多信息](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)。\n\n单击“开始试用”，即表示我同意 [Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
+    "translation": "项目通常涉及组织内部和外部的人员。使用访客帐户，您可以将外部合作伙伴带入您的 Prossell 系统并指定他们可以与谁合作以及看到什么。\n\n[了解有关启用访客帐户的更多信息](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)。\n\n单击“开始试用”，即表示我同意 [Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_title",
@@ -7627,11 +7627,11 @@
   },
   {
     "id": "api.server.warn_metric.email_domain.notification_body",
-    "translation": "项目通常涉及组织内部和外部的人员。使用访客帐户，您可以将外部合作伙伴带入您的 Mattermost 系统并指定他们可以与谁合作以及看到什么。\n\n[了解有关启用访客帐户的更多信息](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)。\n\n通过单击联系我们，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "项目通常涉及组织内部和外部的人员。使用访客帐户，您可以将外部合作伙伴带入您的 Prossell 系统并指定他们可以与谁合作以及看到什么。\n\n[了解有关启用访客帐户的更多信息](https://www.mattermost.com/docs-guest-accounts/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=guest-accounts)。\n\n通过单击联系我们，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.email_domain.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的要求。我有兴趣了解有关使用访客帐户。\n"
+    "translation": "Prossell 与我们联系的要求。我有兴趣了解有关使用访客帐户。\n"
   },
   {
     "id": "api.server.warn_metric.bot_response.start_trial_failure.message",
@@ -7703,7 +7703,7 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我有兴趣了解有关试用团队方案实现高级权限的更多信息。\n"
+    "translation": "Prossell 与我们联系的请求。我有兴趣了解有关试用团队方案实现高级权限的更多信息。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_title",
@@ -7831,11 +7831,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.start_trial.notification_body",
-    "translation": "您的 Mattermost 系统现有几个团队。许多团队都有自己喜欢的协调和协作方式，包括如何创建频道，谁可以邀请新的团队成员以及如何管理集成。使用团队覆盖方案，您可以自定义每个团队中的用户权限，以满足他们的特定需求。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override)。\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
+    "translation": "您的 Prossell 系统现有几个团队。许多团队都有自己喜欢的协调和协作方式，包括如何创建频道，谁可以邀请新的团队成员以及如何管理集成。使用团队覆盖方案，您可以自定义每个团队中的用户权限，以满足他们的特定需求。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override)。\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_teams_5.notification_body",
-    "translation": "您的 Mattermost 系统现有几个团队。许多团队都有自己喜欢的协调和协作方式，包括如何创建频道，谁可以邀请新的团队成员以及如何管理集成。使用团队覆盖方案，您可以自定义每个团队中的用户权限，以满足他们的特定需求。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override)。\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "您的 Prossell 系统现有几个团队。许多团队都有自己喜欢的协调和协作方式，包括如何创建频道，谁可以邀请新的团队成员以及如何管理集成。使用团队覆盖方案，您可以自定义每个团队中的用户权限，以满足他们的特定需求。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions-team-override/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions-team-override)。\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_success.message",
@@ -7843,15 +7843,15 @@
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.start_trial.notification_body",
-    "translation": "您的 Mattermost 系统包含大量消息。默认的 Mattermost 数据库搜索在大约 250 万个帖子市开始显示性能下降。 Elasticsearch 在拥有超过 500 万个帖子时可以帮助避免重大性能问题，例如超时，搜索和提示问题。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n[了解有关提高性能的更多信息](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
+    "translation": "您的 Prossell 系统包含大量消息。默认的 Prossell 数据库搜索在大约 250 万个帖子市开始显示性能下降。 Elasticsearch 在拥有超过 500 万个帖子时可以帮助避免重大性能问题，例如超时，搜索和提示问题。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n[了解有关提高性能的更多信息](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/) ，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.notification_body",
-    "translation": "您的 Mattermost 系统包含大量消息。默认的 Mattermost 数据库搜索在大约 250 万个帖子市开始显示性能下降。 Elasticsearch 在拥有超过 500 万个帖子时可以帮助避免重大性能问题，例如超时，搜索和提示问题。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n[了解有关提高性能的更多信息](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "您的 Prossell 系统包含大量消息。默认的 Prossell 数据库搜索在大约 250 万个帖子市开始显示性能下降。 Elasticsearch 在拥有超过 500 万个帖子时可以帮助避免重大性能问题，例如超时，搜索和提示问题。与我们联系以了解更多信息，并让我们知道我们将如何提供帮助。\n\n[了解有关提高性能的更多信息](https://www.mattermost.com/docs-elasticsearch/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=elasticsearch)\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "api.server.warn_metric.number_of_posts_2M.contact_us.email_body",
-    "translation": "Mattermost 与我们联系的请求。我有兴趣了解更多有关使用 Elasticsearch 提高性能的信息。\n"
+    "translation": "Prossell 与我们联系的请求。我有兴趣了解更多有关使用 Elasticsearch 提高性能的信息。\n"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_success.message",
@@ -7859,11 +7859,11 @@
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.start_trial.notification_body",
-    "translation": "频道有助于改善沟通，但是随着 Mattermost 的用户加入并创建频道，保持系统井井有条的挑战越来越大。使用高级权限，您可以设置哪些用户或角色可以执行某些操作，包括管理频道设置与成员，使用 @channel 或 @here 标记广泛的用户组以及创建新的 Webhook。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\n单击“开始试用”，即表示我同意[Mattermost 软件评估协议t](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
+    "translation": "频道有助于改善沟通，但是随着 Prossell 的用户加入并创建频道，保持系统井井有条的挑战越来越大。使用高级权限，您可以设置哪些用户或角色可以执行某些操作，包括管理频道设置与成员，使用 @channel 或 @here 标记广泛的用户组以及创建新的 Webhook。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\n单击“开始试用”，即表示我同意[Prossell 软件评估协议t](https://mattermost.com/software-evaluation-agreement/)，[隐私权政策](https://mattermost.com/privacy-policy/)，并接收产品电子邮件。"
   },
   {
     "id": "api.server.warn_metric.number_of_channels_50.notification_body",
-    "translation": "频道有助于改善沟通，但是随着 Mattermost 的用户加入并创建频道，保持系统井井有条的挑战越来越大。使用高级权限，您可以设置哪些用户或角色可以执行某些操作，包括管理频道设置与成员，使用 @channel 或 @here 标记广泛的用户组以及创建新的 Webhook。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\n通过单击“联系我们”，您将与 Mattermost，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
+    "translation": "频道有助于改善沟通，但是随着 Prossell 的用户加入并创建频道，保持系统井井有条的挑战越来越大。使用高级权限，您可以设置哪些用户或角色可以执行某些操作，包括管理频道设置与成员，使用 @channel 或 @here 标记广泛的用户组以及创建新的 Webhook。\n\n[了解有关使用高级权限的更多信息](https://www.mattermost.com/docs-advanced-permissions/?utm_medium=product&utm_source=mattermost-advisor-bot&utm_content=advanced-permissions)\n\n通过单击“联系我们”，您将与 Prossell，Inc. 分享您的信息。[了解更多](https://mattermost.com/pl/default-admin-advisory)"
   },
   {
     "id": "ent.saml.do_login.invalid_time.app_error",
@@ -7899,11 +7899,11 @@
   },
   {
     "id": "api.templates.over_limit_14_days_subject",
-    "translation": "您的 Mattermost Cloud 订阅的付款已过期"
+    "translation": "您的 Prossell Cloud 订阅的付款已过期"
   },
   {
     "id": "api.templates.over_limit_14_days_info1",
-    "translation": "提醒您，我们尚未收到您在 {{.OverLimitDate}} 开具的 Mattermost 订阅的付款。如果未收到付款，我们将在近期开始冻结您的服务。"
+    "translation": "提醒您，我们尚未收到您在 {{.OverLimitDate}} 开具的 Prossell 订阅的付款。如果未收到付款，我们将在近期开始冻结您的服务。"
   },
   {
     "id": "api.templates.over_limit_14_days_title",
@@ -7915,7 +7915,7 @@
   },
   {
     "id": "api.templates.copyright",
-    "translation": "© 2020 Mattermost, Inc. 855 El Camino Real, 13A-168, Palo Alto, CA, 94301"
+    "translation": "© 2020 Prossell, Inc."
   },
   {
     "id": "api.templates.at_limit_title",
@@ -7923,7 +7923,7 @@
   },
   {
     "id": "api.templates.at_limit_subject",
-    "translation": "达到 Mattermost Cloud 用户限制"
+    "translation": "达到 Prossell Cloud 用户限制"
   },
   {
     "id": "api.templates.at_limit_info2",
@@ -7931,7 +7931,7 @@
   },
   {
     "id": "api.templates.at_limit_info1",
-    "translation": "看来您的工作区中现在有10个或更多用户 - 太好了！如果您想邀请更多的团队成员，请考虑立即升级到 Mattermost Cloud Professional。"
+    "translation": "看来您的工作区中现在有10个或更多用户 - 太好了！如果您想邀请更多的团队成员，请考虑立即升级到 Prossell Cloud Professional。"
   },
   {
     "id": "api.roles.patch_roles.not_allowed_permission.error",
@@ -8051,11 +8051,11 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.title",
-    "translation": "您的 Mattermost Cloud 发票到期"
+    "translation": "您的 Prossell Cloud 发票到期"
   },
   {
     "id": "api.templates.payment_failed_no_card.subject",
-    "translation": "您的 Mattermost Cloud 订阅需要付款"
+    "translation": "您的 Prossell Cloud 订阅需要付款"
   },
   {
     "id": "api.templates.payment_failed_no_card.info3",
@@ -8063,7 +8063,7 @@
   },
   {
     "id": "api.templates.payment_failed_no_card.info1",
-    "translation": "您最近计费期的 Mattermost Cloud 发票已处理。但是，我们没有记录您的付款明细。"
+    "translation": "您最近计费期的 Prossell Cloud 发票已处理。但是，我们没有记录您的付款明细。"
   },
   {
     "id": "api.templates.payment_failed_no_card.button",
@@ -8075,11 +8075,11 @@
   },
   {
     "id": "api.templates.payment_failed.subject",
-    "translation": "需要采取的措施：Mattermost Cloud 付款失败"
+    "translation": "需要采取的措施：Prossell Cloud 付款失败"
   },
   {
     "id": "api.templates.payment_failed.info3",
-    "translation": "为确保不间断地订阅 Mattermost Cloud，请与您的金融机构联系以解决潜在问题或更新您的付款信息。付款信息更新后，Mattermost 将尝试结清任何未结余额。"
+    "translation": "为确保不间断地订阅 Prossell Cloud，请与您的金融机构联系以解决潜在问题或更新您的付款信息。付款信息更新后，Prossell 将尝试结清任何未结余额。"
   },
   {
     "id": "api.templates.payment_failed.info2",
@@ -8087,7 +8087,7 @@
   },
   {
     "id": "api.templates.payment_failed.info1",
-    "translation": "您的金融机构拒绝了与您的 Mattermost Cloud 工作区相关的 {{.CardBrand}} ****{{.LastFour}} 的付款。"
+    "translation": "您的金融机构拒绝了与您的 Prossell Cloud 工作区相关的 {{.CardBrand}} ****{{.LastFour}} 的付款。"
   },
   {
     "id": "api.templates.over_limit_title",
@@ -8095,11 +8095,11 @@
   },
   {
     "id": "api.templates.over_limit_suspended_title",
-    "translation": "Mattermost Cloud 工作区已被暂停"
+    "translation": "Prossell Cloud 工作区已被暂停"
   },
   {
     "id": "api.templates.over_limit_suspended_subject",
-    "translation": "您的 Mattermost Cloud 订阅已被暂停"
+    "translation": "您的 Prossell Cloud 订阅已被暂停"
   },
   {
     "id": "api.templates.over_limit_suspended_info2",
@@ -8107,19 +8107,19 @@
   },
   {
     "id": "api.templates.over_limit_subject",
-    "translation": "Mattermost Cloud 工作区超出用户限制"
+    "translation": "Prossell Cloud 工作区超出用户限制"
   },
   {
     "id": "api.templates.over_limit_30_days_title",
-    "translation": "Mattermost Cloud 工作区暂停"
+    "translation": "Prossell Cloud 工作区暂停"
   },
   {
     "id": "api.templates.over_limit_90_days_title",
-    "translation": "您的 Mattermost Cloud 工作区计划在明天暂停"
+    "translation": "您的 Prossell Cloud 工作区计划在明天暂停"
   },
   {
     "id": "api.templates.over_limit_suspended_info1",
-    "translation": "您的 Mattermost 工作区已被暂停。工作区中的所有内容和数据将在 1-3 个月内删除。"
+    "translation": "您的 Prossell 工作区已被暂停。工作区中的所有内容和数据将在 1-3 个月内删除。"
   },
   {
     "id": "api.templates.over_limit_info2",
@@ -8127,11 +8127,11 @@
   },
   {
     "id": "api.templates.over_limit_info1",
-    "translation": "您的工作区中似乎有 10 个以上的用户，这超出了 Mattermost Cloud Professional 的免费层限制。为了避免对您的 Mattermost 工作区造成任何干扰，请升级。"
+    "translation": "您的工作区中似乎有 10 个以上的用户，这超出了 Prossell Cloud Professional 的免费层限制。为了避免对您的 Prossell 工作区造成任何干扰，请升级。"
   },
   {
     "id": "api.templates.over_limit_90_days_subject",
-    "translation": "您的 Mattermost Cloud 订阅即将被暂停"
+    "translation": "您的 Prossell Cloud 订阅即将被暂停"
   },
   {
     "id": "api.templates.over_limit_90_days_info4",
@@ -8147,19 +8147,19 @@
   },
   {
     "id": "api.templates.over_limit_90_days_info1",
-    "translation": "这是最后的提醒。我们尚未收到您的 Mattermost Cloud 工作区的付款，该工作区自 {{.OverLimitDate}} 起已经过期。明天我们将暂停您的服务。"
+    "translation": "这是最后的提醒。我们尚未收到您的 Prossell Cloud 工作区的付款，该工作区自 {{.OverLimitDate}} 起已经过期。明天我们将暂停您的服务。"
   },
   {
     "id": "api.templates.over_limit_7_days_subject",
-    "translation": "您的 Mattermost Cloud 订阅逾期付款"
+    "translation": "您的 Prossell Cloud 订阅逾期付款"
   },
   {
     "id": "api.templates.over_limit_7_days_info1",
-    "translation": "Mattermost 无法处理您最近的自动付款。为了保持您的服务有效，请尽快添加付款明细，否则您的服务可能会被暂停。"
+    "translation": "Prossell 无法处理您最近的自动付款。为了保持您的服务有效，请尽快添加付款明细，否则您的服务可能会被暂停。"
   },
   {
     "id": "api.templates.over_limit_30_days_subject",
-    "translation": " 采取行动以保持您的 Mattermost Cloud 订阅"
+    "translation": " 采取行动以保持您的 Prossell Cloud 订阅"
   },
   {
     "id": "api.templates.over_limit_30_days_info2_item3",
@@ -8179,7 +8179,7 @@
   },
   {
     "id": "api.templates.over_limit_30_days_info1",
-    "translation": "现在仍有时间通过解决付款方式方面的问题来保持 Mattermost Cloud 工作区的活动状态。为避免服务被暂停，请更新您的付款方式。"
+    "translation": "现在仍有时间通过解决付款方式方面的问题来保持 Prossell Cloud 工作区的活动状态。为避免服务被暂停，请更新您的付款方式。"
   },
   {
     "id": "api.system.update_viewed_notices.failed",

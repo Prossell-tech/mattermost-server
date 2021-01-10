@@ -85,7 +85,7 @@
   },
   {
     "id": "api.admin.test_email.body",
-    "translation": "La configuration e-mail de Mattermost s'est déroulée avec succès !"
+    "translation": "La configuration e-mail de Prossell s'est déroulée avec succès !"
   },
   {
     "id": "api.admin.test_email.missing_server",
@@ -97,7 +97,7 @@
   },
   {
     "id": "api.admin.test_email.subject",
-    "translation": "Mattermost - Test des paramètres e-mail"
+    "translation": "Prossell - Test des paramètres e-mail"
   },
   {
     "id": "api.admin.test_s3.missing_s3_bucket",
@@ -628,7 +628,7 @@
   },
   {
     "id": "api.command_help.desc",
-    "translation": "Ouvre l'aide de Mattermost"
+    "translation": "Ouvre l'aide de Prossell"
   },
   {
     "id": "api.command_help.name",
@@ -732,7 +732,7 @@
   },
   {
     "id": "api.command_logout.desc",
-    "translation": "Se déconnecte de Mattermost"
+    "translation": "Se déconnecte de Prossell"
   },
   {
     "id": "api.command_logout.name",
@@ -1572,7 +1572,7 @@
   },
   {
     "id": "api.slackimport.slack_add_channels.merge",
-    "translation": "Le canal Slack {{.DisplayName}} existe déjà en tant que canal Mattermost actif. Les deux canaux ont été fusionnés.\r\n"
+    "translation": "Le canal Slack {{.DisplayName}} existe déjà en tant que canal Prossell actif. Les deux canaux ont été fusionnés.\r\n"
   },
   {
     "id": "api.slackimport.slack_add_users.created",
@@ -1584,11 +1584,11 @@
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing",
-    "translation": "L'utilisateur Slack a été fusionné avec un utilisateur Mattermost existant disposant de l'adresse e-mail {{.Email}} et du nom d'utilisateur {{.Username}}.\r\n"
+    "translation": "L'utilisateur Slack a été fusionné avec un utilisateur Prossell existant disposant de l'adresse e-mail {{.Email}} et du nom d'utilisateur {{.Username}}.\r\n"
   },
   {
     "id": "api.slackimport.slack_add_users.merge_existing_failed",
-    "translation": "L'utilisateur Slack a été fusionné avec un utilisateur Mattermost existant disposant de l'adresse e-mail {{.Email}} et du nom d'utilisateur {{.Username}}, mais il a été impossible d'ajouter l'utilisateur à son équipe.\r\n"
+    "translation": "L'utilisateur Slack a été fusionné avec un utilisateur Prossell existant disposant de l'adresse e-mail {{.Email}} et du nom d'utilisateur {{.Username}}, mais il a été impossible d'ajouter l'utilisateur à son équipe.\r\n"
   },
   {
     "id": "api.slackimport.slack_add_users.missing_email_address",
@@ -1600,7 +1600,7 @@
   },
   {
     "id": "api.slackimport.slack_import.log",
-    "translation": "Journal d'importation de Slack dans Mattermost\r\n"
+    "translation": "Journal d'importation de Slack dans Prossell\r\n"
   },
   {
     "id": "api.slackimport.slack_import.note1",
@@ -1872,7 +1872,7 @@
   },
   {
     "id": "api.templates.invite_body.extra_info",
-    "translation": "Mattermost vous permet de partager des messages et des fichiers depuis votre PC ou votre téléphone, tout en bénéficiant de fonctionnalités de recherche instantanée et d'archivage. Après avoir rejoint [[{{.TeamDisplayName}}]], vous pourrez vous connecter à votre nouvelle équipe et utiliser ces fonctionnalités quand bon vous semble via l'adresse suivante :"
+    "translation": "Prossell vous permet de partager des messages et des fichiers depuis votre PC ou votre téléphone, tout en bénéficiant de fonctionnalités de recherche instantanée et d'archivage. Après avoir rejoint [[{{.TeamDisplayName}}]], vous pourrez vous connecter à votre nouvelle équipe et utiliser ces fonctionnalités quand bon vous semble via l'adresse suivante :"
   },
   {
     "id": "api.templates.invite_body.info",
@@ -2016,7 +2016,7 @@
   },
   {
     "id": "api.templates.welcome_body.info3",
-    "translation": "Mattermost vous permet de partager des messages et des fichiers depuis votre ordinateur, téléphone ou tablette avec  des fonctionnalités de recherche instantanée et d'archivage."
+    "translation": "Prossell vous permet de partager des messages et des fichiers depuis votre ordinateur, téléphone ou tablette avec  des fonctionnalités de recherche instantanée et d'archivage."
   },
   {
     "id": "api.templates.welcome_body.title",
@@ -3392,7 +3392,7 @@
   },
   {
     "id": "ent.ldap.do_login.user_filtered.app_error",
-    "translation": "Votre compte AD/LDAP ne dispose pas des permissions pour utiliser ce serveur Mattermost. Veuillez demander à votre administrateur système de vérifier le filtre des utilisateurs AD/LDAP."
+    "translation": "Votre compte AD/LDAP ne dispose pas des permissions pour utiliser ce serveur Prossell. Veuillez demander à votre administrateur système de vérifier le filtre des utilisateurs AD/LDAP."
   },
   {
     "id": "ent.ldap.do_login.user_not_registered.app_error",
@@ -3412,7 +3412,7 @@
   },
   {
     "id": "ent.ldap.syncronize.search_failure.app_error",
-    "translation": "Impossible de rechercher des utilisateurs dans AD/LDAP. Veuillez vous assurer que le serveur Mattermost puisse se connecter à votre serveur AD/LDAP et réessayez."
+    "translation": "Impossible de rechercher des utilisateurs dans AD/LDAP. Veuillez vous assurer que le serveur Prossell puisse se connecter à votre serveur AD/LDAP et réessayez."
   },
   {
     "id": "ent.ldap.validate_filter.app_error",
@@ -3508,7 +3508,7 @@
   },
   {
     "id": "ent.migration.migratetosaml.username_already_used_by_other_user",
-    "translation": "Nom d'utilisateur déjà utilisé par un autre utilisateur de Mattermost."
+    "translation": "Nom d'utilisateur déjà utilisé par un autre utilisateur de Prossell."
   },
   {
     "id": "ent.saml.attribute.app_error",
@@ -3608,7 +3608,7 @@
   },
   {
     "id": "mattermost.bulletin.subject",
-    "translation": "Bulletin de Sécurité Mattermost"
+    "translation": "Bulletin de Sécurité Prossell"
   },
   {
     "id": "mfa.activate.authenticate.app_error",
@@ -4800,7 +4800,7 @@
   },
   {
     "id": "oauth.gitlab.tos.error",
-    "translation": "Les conditions d'utilisation de GitLab ont été mises à jour. Veuillez vous rendre sur gitlab.com pour les accepter et réessayez de vous connecter à Mattermost."
+    "translation": "Les conditions d'utilisation de GitLab ont été mises à jour. Veuillez vous rendre sur gitlab.com pour les accepter et réessayez de vous connecter à Prossell."
   },
   {
     "id": "plugin.api.update_user_status.bad_status",
@@ -5020,11 +5020,11 @@
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support_version",
-    "translation": "La version de ce navigateur web n'est plus pris en charge par Mattermost."
+    "translation": "La version de ce navigateur web n'est plus pris en charge par Prossell."
   },
   {
     "id": "web.error.unsupported_browser.no_longer_support",
-    "translation": "Ce navigateur web n'est plus pris en charge par Mattermost."
+    "translation": "Ce navigateur web n'est plus pris en charge par Prossell."
   },
   {
     "id": "web.error.unsupported_browser.min_os_version.windows",
@@ -5068,7 +5068,7 @@
   },
   {
     "id": "web.error.unsupported_browser.download_app_or_upgrade_browser",
-    "translation": "Téléchargez l'application Mattermost ou utilisez un navigateur web actuellement pris en charge pour une expérience utilisateur optimale."
+    "translation": "Téléchargez l'application Prossell ou utilisez un navigateur web actuellement pris en charge pour une expérience utilisateur optimale."
   },
   {
     "id": "web.error.unsupported_browser.download",
@@ -5844,7 +5844,7 @@
   },
   {
     "id": "api.templates.remove_expired_license.subject",
-    "translation": "Mattermost Enterprise license has been disabled."
+    "translation": "Prossell Enterprise license has been disabled."
   },
   {
     "id": "api.templates.remove_expired_license.body.title",
@@ -6092,7 +6092,7 @@
   },
   {
     "id": "api.bot.teams_channels.add_message_mobile",
-    "translation": "Veuillez m'ajouter aux équipes et canaux dans lesquels vous voulez que j’interagisse. Pour faire ça, utilisez votre navigateur ou l'application de bureau Mattermost."
+    "translation": "Veuillez m'ajouter aux équipes et canaux dans lesquels vous voulez que j’interagisse. Pour faire ça, utilisez votre navigateur ou l'application de bureau Prossell."
   },
   {
     "id": "api.bot.set_bot_icon_image.too_large.app_error",
@@ -7176,11 +7176,11 @@
   },
   {
     "id": "api.license.request-trial.bad-request.terms-not-accepted",
-    "translation": "Vous devez accepter la politique d'évaluation logicielle et de respect de la confidentialité Mattermost pour demander une licence."
+    "translation": "Vous devez accepter la politique d'évaluation logicielle et de respect de la confidentialité Prossell pour demander une licence."
   },
   {
     "id": "api.license.request_trial_license.no-site-url.app_error",
-    "translation": "Impossible de vous octroyer une licence d'évaluation. Merci de configurer l'URL de votre site dans la section Serveur Web de la console système de Mattermost."
+    "translation": "Impossible de vous octroyer une licence d'évaluation. Merci de configurer l'URL de votre site dans la section Serveur Web de la console système de Prossell."
   },
   {
     "id": "api.license.request_trial_license.app_error",

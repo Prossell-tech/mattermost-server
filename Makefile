@@ -95,7 +95,8 @@ PLUGIN_PACKAGES += mattermost-plugin-antivirus-v0.1.2
 PLUGIN_PACKAGES += mattermost-plugin-jira-v2.3.2
 PLUGIN_PACKAGES += mattermost-plugin-gitlab-v1.1.0
 PLUGIN_PACKAGES += mattermost-plugin-jenkins-v1.0.0
-PLUGIN_PACKAGES += mattermost-plugin-incident-response-v0.6.0
+PLUGIN_PACKAGES += mattermost-plugin-incident-management-v1.2.0
+PLUGIN_PACKAGES += mattermost-plugin-channel-export-v0.2.2
 
 # Prepares the enterprise build if exists. The IGNORE stuff is a hack to get the Makefile to execute the commands outside a target
 ifeq ($(BUILD_ENTERPRISE_READY),true)
@@ -188,14 +189,9 @@ prepackaged-plugins: ## Populate the prepackaged-plugins directory
 
 prepackaged-binaries: ## Populate the prepackaged-binaries to the bin directory
 ifeq ($(shell test -f bin/mmctl && printf "yes"),yes)
-	@echo "mmctl already exists in bin/mmctl not downloading a new version."
+	@echo "MMCTL already exists in bin/mmctl not downloading a new version."
 else
-	@MMCTL_VERSION=$$(scripts/get_latest_release.sh mattermost/mmctl release-); if [ $$? -eq 0 ]; then \
-		scripts/download_mmctl_release.sh $$MMCTL_VERSION; \
-	else \
-		echo $$MMCTL_VERSION; \
-		exit 1; \
-	fi;
+	@scripts/download_mmctl_release.sh
 endif
 
 golangci-lint: ## Run golangci-lint on codebase
@@ -222,9 +218,10 @@ i18n-extract: ## Extract strings for translation from the source code
 	$(GO) get -modfile=go.tools.mod github.com/mattermost/mattermost-utilities/mmgotool
 	$(GOBIN)/mmgotool i18n extract --portal-dir=""
 
-i18n-check: ## Exit on empty translation strings except in english base file
+i18n-check: ## Exit on empty translation strings and translation source strings
 	$(GO) get -modfile=go.tools.mod github.com/mattermost/mattermost-utilities/mmgotool
 	$(GOBIN)/mmgotool i18n clean-empty --portal-dir="" --check
+	$(GOBIN)/mmgotool i18n check-empty-src --portal-dir=""
 
 store-mocks: ## Creates mock files.
 	$(GO) get -modfile=go.tools.mod github.com/vektra/mockery/...

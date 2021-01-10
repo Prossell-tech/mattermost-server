@@ -19,18 +19,17 @@ import (
 	"github.com/mattermost/mattermost-server/v5/mlog"
 	"github.com/mattermost/mattermost-server/v5/model"
 	"github.com/mattermost/mattermost-server/v5/services/cache"
-	"github.com/mattermost/mattermost-server/v5/services/filesstore"
 	"github.com/mattermost/mattermost-server/v5/services/upgrader"
 )
 
 const (
-	REDIRECT_LOCATION_CACHE_SIZE = 10000
-	DEFAULT_SERVER_BUSY_SECONDS  = 3600
-	MAX_SERVER_BUSY_SECONDS      = 86400
+	RedirectLocationCacheSize = 10000
+	DefaultServerBusySeconds  = 3600
+	MaxServerBusySeconds      = 86400
 )
 
-var redirectLocationDataCache = cache.NewLRU(&cache.LRUOptions{
-	Size: REDIRECT_LOCATION_CACHE_SIZE,
+var redirectLocationDataCache = cache.NewLRU(cache.LRUOptions{
+	Size: RedirectLocationCacheSize,
 })
 
 func (api *API) InitSystem() {
@@ -97,21 +96,14 @@ func getSystemPing(c *Context, w http.ResponseWriter, r *http.Request) {
 		dbStatusKey := "database_status"
 		s[dbStatusKey] = model.STATUS_OK
 
-		// Database Write Check
-		currentTime := fmt.Sprintf("%d", time.Now().Unix())
-		healthCheckKey := fmt.Sprintf("health_check_%s", c.App.GetClusterId())
-
-		writeErr := c.App.Srv().Store.System().SaveOrUpdate(&model.System{
-			Name:  healthCheckKey,
-			Value: currentTime,
-		})
+		writeErr := c.App.DBHealthCheckWrite()
 		if writeErr != nil {
 			mlog.Warn("Unable to write to database.", mlog.Err(writeErr))
 			s[dbStatusKey] = model.STATUS_UNHEALTHY
 			s[model.STATUS] = model.STATUS_UNHEALTHY
 		}
 
-		_, writeErr = c.App.Srv().Store.System().PermanentDeleteByName(healthCheckKey)
+		writeErr = c.App.DBHealthCheckDelete()
 		if writeErr != nil {
 			mlog.Warn("Unable to remove ping health check value from database.", mlog.Err(writeErr))
 			s[dbStatusKey] = model.STATUS_UNHEALTHY
@@ -124,16 +116,8 @@ func getSystemPing(c *Context, w http.ResponseWriter, r *http.Request) {
 
 		filestoreStatusKey := "filestore_status"
 		s[filestoreStatusKey] = model.STATUS_OK
-		license := c.App.Srv().License()
-		backend, appErr := filesstore.NewFileBackend(&c.App.Config().FileSettings, license != nil && *license.Features.Compliance)
-		if appErr == nil {
-			appErr = backend.TestConnection()
-			if appErr != nil {
-				s[filestoreStatusKey] = model.STATUS_UNHEALTHY
-				s[model.STATUS] = model.STATUS_UNHEALTHY
-			}
-		} else {
-			mlog.Debug("Unable to get filestore for ping status.", mlog.Err(appErr))
+		appErr := c.App.TestFilesStoreConnection()
+		if appErr != nil {
 			s[filestoreStatusKey] = model.STATUS_UNHEALTHY
 			s[model.STATUS] = model.STATUS_UNHEALTHY
 		}
@@ -377,7 +361,7 @@ func getSupportedTimezones(c *Context, w http.ResponseWriter, r *http.Request) {
 
 	b, err := json.Marshal(supportedTimezones)
 	if err != nil {
-		c.Log.Warn("Unable to marshal JSON in timezones.", mlog.Err(err))
+		c.Logger.Warn("Unable to marshal JSON in timezones.", mlog.Err(err))
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 
@@ -400,7 +384,7 @@ func testS3(c *Context, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err := filesstore.CheckMandatoryS3Fields(&cfg.FileSettings)
+	err := c.App.CheckMandatoryS3Fields(&cfg.FileSettings)
 	if err != nil {
 		c.Err = err
 		return
@@ -410,11 +394,7 @@ func testS3(c *Context, w http.ResponseWriter, r *http.Request) {
 		cfg.FileSettings.AmazonS3SecretAccessKey = c.App.Config().FileSettings.AmazonS3SecretAccessKey
 	}
 
-	license := c.App.Srv().License()
-	backend, appErr := filesstore.NewFileBackend(&cfg.FileSettings, license != nil && *license.Features.Compliance)
-	if appErr == nil {
-		appErr = backend.TestConnection()
-	}
+	appErr := c.App.TestFilesStoreConnectionWithConfig(&cfg.FileSettings)
 	if appErr != nil {
 		c.Err = appErr
 		return
@@ -532,12 +512,12 @@ func setServerBusy(c *Context, w http.ResponseWriter, r *http.Request) {
 	// number of seconds to keep server marked busy
 	secs := r.URL.Query().Get("seconds")
 	if secs == "" {
-		secs = strconv.FormatInt(DEFAULT_SERVER_BUSY_SECONDS, 10)
+		secs = strconv.FormatInt(DefaultServerBusySeconds, 10)
 	}
 
 	i, err := strconv.ParseInt(secs, 10, 64)
-	if err != nil || i <= 0 || i > MAX_SERVER_BUSY_SECONDS {
-		c.SetInvalidUrlParam(fmt.Sprintf("seconds must be 1 - %d", MAX_SERVER_BUSY_SECONDS))
+	if err != nil || i <= 0 || i > MaxServerBusySeconds {
+		c.SetInvalidUrlParam(fmt.Sprintf("seconds must be 1 - %d", MaxServerBusySeconds))
 		return
 	}
 

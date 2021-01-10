@@ -10,9 +10,11 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/mattermost/go-i18n/i18n"
 	goi18n "github.com/mattermost/go-i18n/i18n"
+
 	"github.com/mattermost/mattermost-server/v5/einterfaces"
 	"github.com/mattermost/mattermost-server/v5/mlog"
 	"github.com/mattermost/mattermost-server/v5/model"
@@ -114,10 +116,18 @@ func (a *App) initJobs() {
 	if productNoticesJobInterface != nil {
 		a.srv.Jobs.ProductNotices = productNoticesJobInterface(a)
 	}
+	if jobsImportProcessInterface != nil {
+		a.srv.Jobs.ImportProcess = jobsImportProcessInterface(a)
+	}
 
 	if jobsActiveUsersInterface != nil {
 		a.srv.Jobs.ActiveUsers = jobsActiveUsersInterface(a)
 	}
+
+	if jobsCloudInterface != nil {
+		a.srv.Jobs.Cloud = jobsCloudInterface(a.srv)
+	}
+
 	a.srv.Jobs.Workers = a.srv.Jobs.InitWorkers()
 	a.srv.Jobs.Schedulers = a.srv.Jobs.InitSchedulers()
 }
@@ -362,7 +372,6 @@ func (a *App) notifyAdminsOfWarnMetricStatus(warnMetricId string, isE0Edition bo
 
 		channel, appErr := a.GetOrCreateDirectChannel(bot.UserId, sysAdmin.Id)
 		if appErr != nil {
-			mlog.Error("Cannot create channel for system bot notification!", mlog.String("Admin Id", sysAdmin.Id))
 			return appErr
 		}
 
@@ -474,8 +483,7 @@ func (a *App) NotifyAndSetWarnMetricAck(warnMetricId string, sender *model.User,
 			subject := T("api.templates.warn_metric_ack.subject")
 			bodyPage.Props["Title"] = warnMetricDisplayTexts.EmailBody
 
-			if err := mailservice.SendMailUsingConfig(model.MM_SUPPORT_ADDRESS, subject, bodyPage.Render(), a.Config(), false, sender.Email); err != nil {
-				mlog.Error("Error while sending email", mlog.String("destination email", model.MM_SUPPORT_ADDRESS), mlog.Err(err))
+			if err := mailservice.SendMailUsingConfig(model.MM_SUPPORT_ADVISOR_ADDRESS, subject, bodyPage.Render(), a.Config(), false, sender.Email); err != nil {
 				return model.NewAppError("NotifyAndSetWarnMetricAck", "api.email.send_warn_metric_ack.failure.app_error", map[string]interface{}{"Error": err.Error()}, "", http.StatusInternalServerError)
 			}
 		}
@@ -517,7 +525,6 @@ func (a *App) setWarnMetricsStatusForId(warnMetricId string, status string) *mod
 		Name:  warnMetricId,
 		Value: status,
 	}); err != nil {
-		mlog.Error("Unable to write to database.", mlog.Err(err))
 		return model.NewAppError("setWarnMetricsStatusForId", "app.system.warn_metric.store.app_error", map[string]interface{}{"WarnMetricName": warnMetricId}, err.Error(), http.StatusInternalServerError)
 	}
 	return nil
@@ -535,7 +542,6 @@ func (a *App) RequestLicenseAndAckWarnMetric(warnMetricId string, isBot bool) *m
 
 	registeredUsersCount, err := a.Srv().Store.User().Count(model.UserCountOptions{})
 	if err != nil {
-		mlog.Error("Error retrieving the number of registered users", mlog.Err(err))
 		return model.NewAppError("RequestLicenseAndAckWarnMetric", "api.license.request_trial_license.fail_get_user_count.app_error", nil, err.Error(), http.StatusBadRequest)
 	}
 
@@ -676,4 +682,22 @@ func (a *App) SetServer(srv *Server) {
 }
 func (a *App) GetT() goi18n.TranslateFunc {
 	return a.t
+}
+
+func (a *App) DBHealthCheckWrite() error {
+	currentTime := strconv.FormatInt(time.Now().Unix(), 10)
+
+	return a.Srv().Store.System().SaveOrUpdate(&model.System{
+		Name:  a.dbHealthCheckKey(),
+		Value: currentTime,
+	})
+}
+
+func (a *App) DBHealthCheckDelete() error {
+	_, err := a.Srv().Store.System().PermanentDeleteByName(a.dbHealthCheckKey())
+	return err
+}
+
+func (a *App) dbHealthCheckKey() string {
+	return fmt.Sprintf("health_check_%s", a.GetClusterId())
 }

@@ -31,6 +31,7 @@ const (
 	HEADER_CSRF_TOKEN         = "X-CSRF-Token"
 	HEADER_BEARER             = "BEARER"
 	HEADER_AUTH               = "Authorization"
+	HEADER_CLOUD_TOKEN        = "X-Cloud-Token"
 	HEADER_REQUESTED_WITH     = "X-Requested-With"
 	HEADER_REQUESTED_WITH_XML = "XMLHttpRequest"
 	STATUS                    = "status"
@@ -93,9 +94,8 @@ func (c *Client4) boolString(value bool) string {
 
 	if value {
 		return "true"
-	} else {
-		return "false"
 	}
+	return "false"
 }
 
 func closeBody(r *http.Response) {
@@ -187,6 +187,14 @@ func (c *Client4) GetUsersRoute() string {
 
 func (c *Client4) GetUserRoute(userId string) string {
 	return fmt.Sprintf(c.GetUsersRoute()+"/%v", userId)
+}
+
+func (c *Client4) GetUserThreadsRoute(userID, teamID string) string {
+	return c.GetUserRoute(userID) + c.GetTeamRoute(teamID) + "/threads"
+}
+
+func (c *Client4) GetUserThreadRoute(userId, teamId, threadId string) string {
+	return c.GetUserThreadsRoute(userId, teamId) + "/" + threadId
 }
 
 func (c *Client4) GetUserCategoryRoute(userID, teamID string) string {
@@ -532,6 +540,10 @@ func (c *Client4) GetGroupSyncableRoute(groupID, syncableID string, syncableType
 
 func (c *Client4) GetGroupSyncablesRoute(groupID string, syncableType GroupSyncableType) string {
 	return fmt.Sprintf("%s/%ss", c.GetGroupRoute(groupID), strings.ToLower(syncableType.String()))
+}
+
+func (c *Client4) GetImportsRoute() string {
+	return "/imports"
 }
 
 func (c *Client4) DoApiGet(url string, etag string) (*http.Response, *AppError) {
@@ -2988,12 +3000,12 @@ func (c *Client4) GetPostsBefore(channelId, postId string, page, perPage int, et
 // GetPostsAroundLastUnread gets a list of posts around last unread post by a user in a channel.
 func (c *Client4) GetPostsAroundLastUnread(userId, channelId string, limitBefore, limitAfter int) (*PostList, *Response) {
 	query := fmt.Sprintf("?limit_before=%v&limit_after=%v", limitBefore, limitAfter)
-	if r, err := c.DoApiGet(c.GetUserRoute(userId)+c.GetChannelRoute(channelId)+"/posts/unread"+query, ""); err != nil {
+	r, err := c.DoApiGet(c.GetUserRoute(userId)+c.GetChannelRoute(channelId)+"/posts/unread"+query, "")
+	if err != nil {
 		return nil, BuildErrorResponse(r, err)
-	} else {
-		defer closeBody(r)
-		return PostListFromJson(r.Body), BuildResponse(r)
 	}
+	defer closeBody(r)
+	return PostListFromJson(r.Body), BuildResponse(r)
 }
 
 // SearchPosts returns any posts with matching terms string.
@@ -3270,6 +3282,21 @@ func (c *Client4) GetPingWithServerStatus() (string, *Response) {
 	}
 	defer closeBody(r)
 	return MapFromJson(r.Body)["status"], BuildResponse(r)
+}
+
+// GetPingWithFullServerStatus will return the full status if several basic server
+// health checks all pass successfully.
+func (c *Client4) GetPingWithFullServerStatus() (map[string]string, *Response) {
+	r, err := c.DoApiGet(c.GetSystemRoute()+"/ping?get_server_status="+c.boolString(true), "")
+	if r != nil && r.StatusCode == 500 {
+		defer r.Body.Close()
+		return map[string]string{"status": STATUS_UNHEALTHY}, BuildErrorResponse(r, err)
+	}
+	if err != nil {
+		return nil, BuildErrorResponse(r, err)
+	}
+	defer closeBody(r)
+	return MapFromJson(r.Body), BuildResponse(r)
 }
 
 // TestEmail will attempt to connect to the configured SMTP server.
@@ -4094,7 +4121,7 @@ func (c *Client4) MigrateAuthToSaml(fromAuthService string, usersMap map[string]
 
 // UploadLdapPublicCertificate will upload a public certificate for LDAP and set the config to use it.
 func (c *Client4) UploadLdapPublicCertificate(data []byte) (bool, *Response) {
-	body, writer, err := fileToMultipart(data, LDAP_PUBIC_CERTIFICATE_NAME)
+	body, writer, err := fileToMultipart(data, LDAP_PUBLIC_CERTIFICATE_NAME)
 	if err != nil {
 		return false, &Response{Error: NewAppError("UploadLdapPublicCertificate", "model.client.upload_ldap_cert.app_error", nil, err.Error(), http.StatusBadRequest)}
 	}
@@ -5611,6 +5638,16 @@ func (c *Client4) UploadData(uploadId string, data io.Reader) (*FileInfo, *Respo
 	return FileInfoFromJson(r.Body), BuildResponse(r)
 }
 
+func (c *Client4) UpdatePassword(userId, currentPassword, newPassword string) *Response {
+	requestBody := map[string]string{"current_password": currentPassword, "new_password": newPassword}
+	r, err := c.DoApiPut(c.GetUserRoute(userId)+"/password", MapToJson(requestBody))
+	if err != nil {
+		return BuildErrorResponse(r, err)
+	}
+	defer closeBody(r)
+	return BuildResponse(r)
+}
+
 // Cloud Section
 
 func (c *Client4) GetCloudProducts() ([]*Product, *Response) {
@@ -5643,6 +5680,155 @@ func (c *Client4) ConfirmCustomerPayment(confirmRequest *ConfirmPaymentMethodReq
 	json, _ := json.Marshal(confirmRequest)
 
 	r, appErr := c.doApiPostBytes(c.GetCloudRoute()+"/payment/confirm", json)
+	if appErr != nil {
+		return BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	return BuildResponse(r)
+}
+
+func (c *Client4) GetCloudCustomer() (*CloudCustomer, *Response) {
+	r, appErr := c.DoApiGet(c.GetCloudRoute()+"/customer", "")
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var cloudCustomer *CloudCustomer
+	json.NewDecoder(r.Body).Decode(&cloudCustomer)
+
+	return cloudCustomer, BuildResponse(r)
+}
+
+func (c *Client4) GetSubscription() (*Subscription, *Response) {
+	r, appErr := c.DoApiGet(c.GetCloudRoute()+"/subscription", "")
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var subscription *Subscription
+	json.NewDecoder(r.Body).Decode(&subscription)
+
+	return subscription, BuildResponse(r)
+}
+
+func (c *Client4) GetInvoicesForSubscription() ([]*Invoice, *Response) {
+	r, appErr := c.DoApiGet(c.GetCloudRoute()+"/subscription/invoices", "")
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var invoices []*Invoice
+	json.NewDecoder(r.Body).Decode(&invoices)
+
+	return invoices, BuildResponse(r)
+}
+
+func (c *Client4) UpdateCloudCustomer(customerInfo *CloudCustomerInfo) (*CloudCustomer, *Response) {
+	customerBytes, _ := json.Marshal(customerInfo)
+
+	r, appErr := c.doApiPutBytes(c.GetCloudRoute()+"/customer", customerBytes)
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var customer *CloudCustomer
+	json.NewDecoder(r.Body).Decode(&customer)
+
+	return customer, BuildResponse(r)
+}
+
+func (c *Client4) UpdateCloudCustomerAddress(address *Address) (*CloudCustomer, *Response) {
+	addressBytes, _ := json.Marshal(address)
+
+	r, appErr := c.doApiPutBytes(c.GetCloudRoute()+"/customer/address", addressBytes)
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var customer *CloudCustomer
+	json.NewDecoder(r.Body).Decode(&customer)
+
+	return customer, BuildResponse(r)
+}
+
+func (c *Client4) ListImports() ([]string, *Response) {
+	r, err := c.DoApiGet(c.GetImportsRoute(), "")
+	if err != nil {
+		return nil, BuildErrorResponse(r, err)
+	}
+	defer closeBody(r)
+	return ArrayFromJson(r.Body), BuildResponse(r)
+}
+
+func (c *Client4) GetUserThreads(userId, teamId string, options GetUserThreadsOpts) (*Threads, *Response) {
+	v := url.Values{}
+	if options.Since != 0 {
+		v.Set("since", fmt.Sprintf("%d", options.Since))
+	}
+	if options.Page != 0 {
+		v.Set("page", fmt.Sprintf("%d", options.Page))
+	}
+	if options.PageSize != 0 {
+		v.Set("pageSize", fmt.Sprintf("%d", options.PageSize))
+	}
+	if options.Extended {
+		v.Set("extended", "true")
+	}
+	if options.Deleted {
+		v.Set("deleted", "true")
+	}
+
+	url := c.GetUserThreadsRoute(userId, teamId)
+	if len(v) > 0 {
+		url += "?" + v.Encode()
+	}
+
+	r, appErr := c.DoApiGet(url, "")
+	if appErr != nil {
+		return nil, BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	var threads Threads
+	json.NewDecoder(r.Body).Decode(&threads)
+
+	return &threads, BuildResponse(r)
+}
+
+func (c *Client4) UpdateThreadsReadForUser(userId, teamId string) *Response {
+	r, appErr := c.DoApiPut(fmt.Sprintf("%s/read", c.GetUserThreadsRoute(userId, teamId)), "")
+	if appErr != nil {
+		return BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	return BuildResponse(r)
+}
+
+func (c *Client4) UpdateThreadReadForUser(userId, teamId, threadId string, timestamp int64) *Response {
+	r, appErr := c.DoApiPut(fmt.Sprintf("%s/read/%d", c.GetUserThreadRoute(userId, teamId, threadId), timestamp), "")
+	if appErr != nil {
+		return BuildErrorResponse(r, appErr)
+	}
+	defer closeBody(r)
+
+	return BuildResponse(r)
+}
+
+func (c *Client4) UpdateThreadFollowForUser(userId, teamId, threadId string, state bool) *Response {
+	var appErr *AppError
+	var r *http.Response
+	if state {
+		r, appErr = c.DoApiPut(c.GetUserThreadRoute(userId, teamId, threadId)+"/following", "")
+	} else {
+		r, appErr = c.DoApiDelete(c.GetUserThreadRoute(userId, teamId, threadId) + "/following")
+	}
 	if appErr != nil {
 		return BuildErrorResponse(r, appErr)
 	}

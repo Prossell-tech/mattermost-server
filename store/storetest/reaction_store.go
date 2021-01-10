@@ -6,13 +6,14 @@ package storetest
 import (
 	"sync"
 	"testing"
+	"time"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 
 	"github.com/mattermost/mattermost-server/v5/model"
 	"github.com/mattermost/mattermost-server/v5/store"
 	"github.com/mattermost/mattermost-server/v5/store/retrylayer"
-
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestReactionStore(t *testing.T, ss store.Store) {
@@ -38,6 +39,8 @@ func testReactionSave(t *testing.T, ss store.Store) {
 		PostId:    post.Id,
 		EmojiName: model.NewId(),
 	}
+
+	time.Sleep(time.Millisecond)
 	reaction, nErr := ss.Reaction().Save(reaction1)
 	require.Nil(t, nErr)
 
@@ -66,6 +69,8 @@ func testReactionSave(t *testing.T, ss store.Store) {
 		PostId:    reaction1.PostId,
 		EmojiName: reaction1.EmojiName,
 	}
+
+	time.Sleep(time.Millisecond)
 	_, nErr = ss.Reaction().Save(reaction2)
 	require.Nil(t, nErr)
 

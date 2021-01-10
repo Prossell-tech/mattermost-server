@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/mattermost/mattermost-server/v5/mlog"
@@ -18,6 +19,85 @@ import (
 )
 
 const minFirstPartSize = 5 * 1024 * 1024 // 5MB
+const incompleteUploadSuffix = ".tmp"
+
+func (a *App) runPluginsHook(info *model.FileInfo, file io.Reader) *model.AppError {
+	pluginsEnvironment := a.GetPluginsEnvironment()
+	if pluginsEnvironment == nil {
+		return nil
+	}
+
+	filePath := info.Path
+	// using a pipe to avoid loading the whole file content in memory.
+	r, w := io.Pipe()
+	errChan := make(chan *model.AppError, 1)
+	hookHasRunCh := make(chan struct{})
+
+	go func() {
+		defer w.Close()
+		defer close(hookHasRunCh)
+		defer close(errChan)
+		var rejErr *model.AppError
+		var once sync.Once
+		pluginContext := a.PluginContext()
+		pluginsEnvironment.RunMultiPluginHook(func(hooks plugin.Hooks) bool {
+			once.Do(func() {
+				hookHasRunCh <- struct{}{}
+			})
+			newInfo, rejStr := hooks.FileWillBeUploaded(pluginContext, info, file, w)
+			if rejStr != "" {
+				rejErr = model.NewAppError("runPluginsHook", "app.upload.run_plugins_hook.rejected",
+					map[string]interface{}{"Filename": info.Name, "Reason": rejStr}, "", http.StatusBadRequest)
+				return false
+			}
+			if newInfo != nil {
+				info = newInfo
+			}
+			return true
+		}, plugin.FileWillBeUploadedId)
+		if rejErr != nil {
+			errChan <- rejErr
+		}
+	}()
+
+	// If the plugin hook has not run we can return early.
+	if _, ok := <-hookHasRunCh; !ok {
+		return nil
+	}
+
+	tmpPath := filePath + ".tmp"
+	written, err := a.WriteFile(r, tmpPath)
+	if err != nil {
+		if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
+			mlog.Error("Failed to remove file", mlog.Err(fileErr))
+		}
+		return err
+	}
+
+	if err = <-errChan; err != nil {
+		if fileErr := a.RemoveFile(info.Path); fileErr != nil {
+			mlog.Error("Failed to remove file", mlog.Err(fileErr))
+		}
+		if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
+			mlog.Error("Failed to remove file", mlog.Err(fileErr))
+		}
+		return err
+	}
+
+	if written > 0 {
+		info.Size = written
+		if fileErr := a.MoveFile(tmpPath, info.Path); fileErr != nil {
+			return model.NewAppError("runPluginsHook", "app.upload.run_plugins_hook.move_fail",
+				nil, fileErr.Error(), http.StatusInternalServerError)
+		}
+	} else {
+		if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
+			mlog.Error("Failed to remove file", mlog.Err(fileErr))
+		}
+	}
+
+	return nil
+}
 
 func (a *App) CreateUploadSession(us *model.UploadSession) (*model.UploadSession, *model.AppError) {
 	if us.FileSize > *a.Config().FileSettings.MaxFileSize {
@@ -28,19 +108,25 @@ func (a *App) CreateUploadSession(us *model.UploadSession) (*model.UploadSession
 	us.FileOffset = 0
 	now := time.Now()
 	us.CreateAt = model.GetMillisForTime(now)
-	us.Path = now.Format("20060102") + "/teams/noteam/channels/" + us.ChannelId + "/users/" + us.UserId + "/" + us.Id + "/" + filepath.Base(us.Filename)
+	if us.Type == model.UploadTypeAttachment {
+		us.Path = now.Format("20060102") + "/teams/noteam/channels/" + us.ChannelId + "/users/" + us.UserId + "/" + us.Id + "/" + filepath.Base(us.Filename)
+	} else if us.Type == model.UploadTypeImport {
+		us.Path = *a.Config().ImportSettings.Directory + "/" + us.Id + "_" + filepath.Base(us.Filename)
+	}
 	if err := us.IsValid(); err != nil {
 		return nil, err
 	}
 
-	channel, err := a.GetChannel(us.ChannelId)
-	if err != nil {
-		return nil, model.NewAppError("CreateUploadSession", "app.upload.create.incorrect_channel_id.app_error",
-			map[string]interface{}{"channelId": us.ChannelId}, "", http.StatusBadRequest)
-	}
-	if channel.DeleteAt != 0 {
-		return nil, model.NewAppError("CreateUploadSession", "app.upload.create.cannot_upload_to_deleted_channel.app_error",
-			map[string]interface{}{"channelId": us.ChannelId}, "", http.StatusBadRequest)
+	if us.Type == model.UploadTypeAttachment {
+		channel, err := a.GetChannel(us.ChannelId)
+		if err != nil {
+			return nil, model.NewAppError("CreateUploadSession", "app.upload.create.incorrect_channel_id.app_error",
+				map[string]interface{}{"channelId": us.ChannelId}, "", http.StatusBadRequest)
+		}
+		if channel.DeleteAt != 0 {
+			return nil, model.NewAppError("CreateUploadSession", "app.upload.create.cannot_upload_to_deleted_channel.app_error",
+				map[string]interface{}{"channelId": us.ChannelId}, "", http.StatusBadRequest)
+		}
 	}
 
 	us, storeErr := a.Srv().Store.UploadSession().Save(us)
@@ -98,6 +184,19 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 		a.Srv().uploadLockMapMut.Unlock()
 	}()
 
+	// fetch the session from store to check for inconsistencies.
+	if storedSession, err := a.GetUploadSession(us.Id); err != nil {
+		return nil, err
+	} else if us.FileOffset != storedSession.FileOffset {
+		return nil, model.NewAppError("UploadData", "app.upload.upload_data.concurrent.app_error",
+			nil, "FileOffset mismatch", http.StatusBadRequest)
+	}
+
+	uploadPath := us.Path
+	if us.Type == model.UploadTypeImport {
+		uploadPath += incompleteUploadSuffix
+	}
+
 	// make sure it's not possible to upload more data than what is expected.
 	lr := &io.LimitedReader{
 		R: rd,
@@ -107,12 +206,12 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 	var written int64
 	if us.FileOffset == 0 {
 		// new upload
-		written, err = a.WriteFile(lr, us.Path)
+		written, err = a.WriteFile(lr, uploadPath)
 		if err != nil && written == 0 {
 			return nil, err
 		}
 		if written < minFirstPartSize && written != us.FileSize {
-			a.RemoveFile(us.Path)
+			a.RemoveFile(uploadPath)
 			var errStr string
 			if err != nil {
 				errStr = err.Error()
@@ -122,7 +221,7 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 		}
 	} else if us.FileOffset < us.FileSize {
 		// resume upload
-		written, err = a.AppendFile(lr, us.Path)
+		written, err = a.AppendFile(lr, uploadPath)
 	}
 	if written > 0 {
 		us.FileOffset += written
@@ -140,7 +239,7 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 	}
 
 	// upload is done, create FileInfo
-	file, err := a.FileReader(us.Path)
+	file, err := a.FileReader(uploadPath)
 	if err != nil {
 		return nil, model.NewAppError("UploadData", "app.upload.upload_data.read_file.app_error", nil, err.Error(), http.StatusInternalServerError)
 	}
@@ -154,58 +253,9 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 	info.CreatorId = us.UserId
 	info.Path = us.Path
 
-	// call plugins upload hook
-	if pluginsEnvironment := a.GetPluginsEnvironment(); pluginsEnvironment != nil {
-		// using a pipe to avoid loading the whole file content in memory.
-		r, w := io.Pipe()
-		errChan := make(chan *model.AppError, 1)
-		go func() {
-			defer w.Close()
-			defer close(errChan)
-			pluginContext := a.PluginContext()
-			pluginsEnvironment.RunMultiPluginHook(func(hooks plugin.Hooks) bool {
-				newInfo, rejStr := hooks.FileWillBeUploaded(pluginContext, info, file, w)
-				if rejStr != "" {
-					errChan <- model.NewAppError("UploadData", "File rejected by plugin. "+rejStr, nil, "", http.StatusBadRequest)
-					return false
-				}
-				if newInfo != nil {
-					info = newInfo
-				}
-				return true
-			}, plugin.FileWillBeUploadedId)
-		}()
-
-		var written int64
-		tmpPath := us.Path + ".tmp"
-		written, err = a.WriteFile(r, tmpPath)
-		if err != nil {
-			if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
-				mlog.Error("Failed to remove file", mlog.Err(fileErr))
-			}
-			return nil, err
-		}
-
-		if err = <-errChan; err != nil {
-			if fileErr := a.RemoveFile(us.Path); fileErr != nil {
-				mlog.Error("Failed to remove file", mlog.Err(fileErr))
-			}
-			if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
-				mlog.Error("Failed to remove file", mlog.Err(fileErr))
-			}
-			return nil, err
-		}
-
-		if written > 0 {
-			info.Size = written
-			if fileErr := a.MoveFile(tmpPath, us.Path); fileErr != nil {
-				mlog.Error("Failed to move file", mlog.Err(fileErr))
-			}
-		} else {
-			if fileErr := a.RemoveFile(tmpPath); fileErr != nil {
-				mlog.Error("Failed to remove file", mlog.Err(fileErr))
-			}
-		}
+	// run plugins upload hook
+	if err := a.runPluginsHook(info, file); err != nil {
+		return nil, err
 	}
 
 	// image post-processing
@@ -221,11 +271,17 @@ func (a *App) UploadData(us *model.UploadSession, rd io.Reader) (*model.FileInfo
 		nameWithoutExtension := info.Name[:strings.LastIndex(info.Name, ".")]
 		info.PreviewPath = filepath.Dir(info.Path) + "/" + nameWithoutExtension + "_preview.jpg"
 		info.ThumbnailPath = filepath.Dir(info.Path) + "/" + nameWithoutExtension + "_thumb.jpg"
-		imgData, fileErr := a.ReadFile(us.Path)
+		imgData, fileErr := a.ReadFile(uploadPath)
 		if fileErr != nil {
 			return nil, fileErr
 		}
 		a.HandleImages([]string{info.PreviewPath}, []string{info.ThumbnailPath}, [][]byte{imgData})
+	}
+
+	if us.Type == model.UploadTypeImport {
+		if err := a.MoveFile(uploadPath, us.Path); err != nil {
+			return nil, model.NewAppError("UploadData", "app.upload.upload_data.move_file.app_error", nil, err.Error(), http.StatusInternalServerError)
+		}
 	}
 
 	var storeErr error

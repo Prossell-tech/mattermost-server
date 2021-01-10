@@ -10,14 +10,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+
 	"github.com/mattermost/mattermost-server/v5/model"
 	"github.com/mattermost/mattermost-server/v5/store"
 	"github.com/mattermost/mattermost-server/v5/utils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
-func TestPostStore(t *testing.T, ss store.Store, s SqlSupplier) {
+func TestPostStore(t *testing.T, ss store.Store, s SqlStore) {
 	t.Run("SaveMultiple", func(t *testing.T) { testPostStoreSaveMultiple(t, ss) })
 	t.Run("Save", func(t *testing.T) { testPostStoreSave(t, ss) })
 	t.Run("SaveAndUpdateChannelMsgCounts", func(t *testing.T) { testPostStoreSaveChannelMsgCounts(t, ss) })
@@ -1691,7 +1692,7 @@ func testPostCountsByDay(t *testing.T, ss store.Store) {
 	assert.Equal(t, int64(6), r2)
 }
 
-func testPostStoreGetFlaggedPostsForTeam(t *testing.T, ss store.Store, s SqlSupplier) {
+func testPostStoreGetFlaggedPostsForTeam(t *testing.T, ss store.Store, s SqlStore) {
 	c1 := &model.Channel{}
 	c1.TeamId = model.NewId()
 	c1.DisplayName = "Channel1"
@@ -2609,7 +2610,7 @@ func testPostStoreGetRepliesForExport(t *testing.T, ss store.Store) {
 
 }
 
-func testPostStoreGetDirectPostParentsForExportAfter(t *testing.T, ss store.Store, s SqlSupplier) {
+func testPostStoreGetDirectPostParentsForExportAfter(t *testing.T, ss store.Store, s SqlStore) {
 	teamId := model.NewId()
 
 	o1 := model.Channel{}
@@ -2663,7 +2664,7 @@ func testPostStoreGetDirectPostParentsForExportAfter(t *testing.T, ss store.Stor
 	s.GetMaster().Exec("TRUNCATE Channels")
 }
 
-func testPostStoreGetDirectPostParentsForExportAfterDeleted(t *testing.T, ss store.Store, s SqlSupplier) {
+func testPostStoreGetDirectPostParentsForExportAfterDeleted(t *testing.T, ss store.Store, s SqlStore) {
 	teamId := model.NewId()
 
 	o1 := model.Channel{}
@@ -2729,7 +2730,7 @@ func testPostStoreGetDirectPostParentsForExportAfterDeleted(t *testing.T, ss sto
 	s.GetMaster().Exec("TRUNCATE Channels")
 }
 
-func testPostStoreGetDirectPostParentsForExportAfterBatched(t *testing.T, ss store.Store, s SqlSupplier) {
+func testPostStoreGetDirectPostParentsForExportAfterBatched(t *testing.T, ss store.Store, s SqlStore) {
 	teamId := model.NewId()
 
 	o1 := model.Channel{}

@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"testing"
 
@@ -248,7 +249,7 @@ func (s *FileBackendTestSuite) TestListDirectory() {
 
 	paths, err := s.backend.ListDirectory("19700101")
 	s.Nil(err)
-	s.Len(*paths, 0)
+	s.Len(paths, 0)
 
 	written, err := s.backend.WriteFile(bytes.NewReader(b), path1)
 	s.Nil(err)
@@ -260,20 +261,20 @@ func (s *FileBackendTestSuite) TestListDirectory() {
 
 	paths, err = s.backend.ListDirectory("19700101")
 	s.Nil(err)
-	s.Len(*paths, 1)
-	s.Equal(path1, (*paths)[0])
+	s.Len(paths, 1)
+	s.Equal(path1, (paths)[0])
 
 	paths, err = s.backend.ListDirectory("19700101/")
 	s.Nil(err)
-	s.Len(*paths, 1)
-	s.Equal(path1, (*paths)[0])
+	s.Len(paths, 1)
+	s.Equal(path1, (paths)[0])
 
 	paths, err = s.backend.ListDirectory("")
 	s.Nil(err)
 
 	found1 := false
 	found2 := false
-	for _, path := range *paths {
+	for _, path := range paths {
 		if path == "19700101" {
 			found1 = true
 		} else if path == "19800101" {
@@ -363,4 +364,63 @@ func (s *FileBackendTestSuite) TestAppendFile() {
 		s.EqualValues(len(b)+len(b2)+len(b3), len(read))
 		s.EqualValues(append(append(b, b2...), b3...), read)
 	})
+}
+
+func (s *FileBackendTestSuite) TestFileSize() {
+	s.Run("nonexistent file", func() {
+		size, err := s.backend.FileSize("tests/nonexistentfile")
+		s.NotNil(err)
+		s.Zero(size)
+	})
+
+	s.Run("valid file", func() {
+		data := make([]byte, rand.Intn(1024*1024)+1)
+		path := "tests/" + model.NewId()
+
+		written, err := s.backend.WriteFile(bytes.NewReader(data), path)
+		s.Nil(err)
+		s.EqualValues(len(data), written)
+		defer s.backend.RemoveFile(path)
+
+		size, err := s.backend.FileSize(path)
+		s.Nil(err)
+		s.Equal(int64(len(data)), size)
+	})
+}
+
+func BenchmarkS3WriteFile(b *testing.B) {
+	utils.TranslationsPreInit()
+
+	settings := &model.FileSettings{
+		DriverName:              model.NewString(model.IMAGE_DRIVER_S3),
+		AmazonS3AccessKeyId:     model.NewString(model.MINIO_ACCESS_KEY),
+		AmazonS3SecretAccessKey: model.NewString(model.MINIO_SECRET_KEY),
+		AmazonS3Bucket:          model.NewString(model.MINIO_BUCKET),
+		AmazonS3Region:          model.NewString(""),
+		AmazonS3Endpoint:        model.NewString("localhost:9000"),
+		AmazonS3PathPrefix:      model.NewString(""),
+		AmazonS3SSL:             model.NewBool(false),
+		AmazonS3SSE:             model.NewBool(false),
+	}
+
+	backend, err := NewFileBackend(settings, true)
+	require.Nil(b, err)
+
+	// This is needed to create the bucket if it doesn't exist.
+	require.Nil(b, backend.TestConnection())
+
+	path := "tests/" + model.NewId()
+	size := 1 * 1024 * 1024
+	data := make([]byte, size)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		written, err := backend.WriteFile(bytes.NewReader(data), path)
+		defer backend.RemoveFile(path)
+		require.Nil(b, err)
+		require.Equal(b, len(data), int(written))
+	}
+
+	b.StopTimer()
 }
